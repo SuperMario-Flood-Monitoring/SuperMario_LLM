@@ -2,7 +2,7 @@
 
 import requests
 import json
-
+#테스트
 # URL 문자열
 url = 'https://apihub.kma.go.kr/api/json?authKey=lRjlhdTnT5mY5YXU58-ZBg'
 

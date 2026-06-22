@@ -1,5 +1,7 @@
+import os
+
 from dotenv import load_dotenv
-from fastapi import FastAPI, HTTPException
+from fastapi import APIRouter, FastAPI, HTTPException
 from pydantic import BaseModel
 
 load_dotenv()
@@ -9,9 +11,14 @@ from scenarios import WEATHER_SCENARIOS
 from telegram_notifier import send_analysis_message
 
 app = FastAPI()
+api = APIRouter()
+LLM_API_PREFIX = os.getenv("LLM_API_PREFIX", "/llm").strip() or "/llm"
+if not LLM_API_PREFIX.startswith("/"):
+    LLM_API_PREFIX = f"/{LLM_API_PREFIX}"
+LLM_API_PREFIX = LLM_API_PREFIX.rstrip("/")
 
 
-@app.get("/health")
+@api.get("/health")
 async def health():
     return {"status": "ok"}
 
@@ -20,7 +27,7 @@ class AnalyzeRequest(BaseModel):
     id: str
 
 
-@app.post("/analyze")
+@api.post("/analyze")
 async def analyze(request: AnalyzeRequest):
     scenario_data = WEATHER_SCENARIOS.get(request.id)
     if scenario_data is None:
@@ -45,3 +52,6 @@ async def analyze(request: AnalyzeRequest):
         "id": request.id,
         "analysis": analysis,
     }
+
+
+app.include_router(api, prefix=LLM_API_PREFIX)
