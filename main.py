@@ -11,6 +11,11 @@ from telegram_notifier import send_analysis_message
 app = FastAPI()
 
 
+@app.get("/health")
+async def health():
+    return {"status": "ok"}
+
+
 class AnalyzeRequest(BaseModel):
     id: str
 
