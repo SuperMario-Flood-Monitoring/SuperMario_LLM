@@ -9,7 +9,7 @@ from telegram_notifier import discover_chat_id, format_analysis_message
 
 load_dotenv()
 
-FASTAPI_URL = os.getenv("FASTAPI_URL", "http://127.0.0.1:8000/analyze")
+FASTAPI_URL = os.getenv("FASTAPI_URL", "http://127.0.0.1:8001/llm/analyze")
 
 
 async def setup_chat_id():
