@@ -76,3 +76,73 @@ jobs:
               "source_branch": "${{ github.ref_name }}",
               "source_sha": "${{ github.sha }}"
             }
+
+      - name: Notify Telegram
+        if: always()
+        env:
+          BOT_TOKEN: ${{ secrets.ACTIONS_TELEGRAM_BOT_TOKEN }}
+          CHAT_ID: ${{ secrets.ACTIONS_TELEGRAM_CHAT_ID }}
+          STATUS: ${{ job.status }}
+          REPOSITORY: ${{ github.repository }}
+          WORKFLOW: ${{ github.workflow }}
+          JOB: ${{ github.job }}
+          BRANCH: ${{ github.ref_name }}
+          ACTOR: ${{ github.actor }}
+          EVENT_NAME: ${{ github.event_name }}
+          COMMIT_SHA: ${{ github.sha }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          SERVICE_ICON: "🧠"
+          SERVICE_NAME: "SuperMario LLM"
+          EXTRA_LABEL: "헬스 테스트"
+          EXTRA_URL: "https://supermario.o-r.kr/llm/health"
+        run: |
+          if [ -z "$BOT_TOKEN" ] || [ -z "$CHAT_ID" ]; then
+            echo "Telegram secrets are not set. Skipping notification."
+            exit 0
+          fi
+
+          BOT_TOKEN="$(printf '%s' "$BOT_TOKEN" | tr -d '\r\n')"
+          CHAT_ID="$(printf '%s' "$CHAT_ID" | tr -d '[:space:]')"
+          BOT_TOKEN="${BOT_TOKEN%\"}"; BOT_TOKEN="${BOT_TOKEN#\"}"
+          BOT_TOKEN="${BOT_TOKEN%\'}"; BOT_TOKEN="${BOT_TOKEN#\'}"
+          CHAT_ID="${CHAT_ID%\"}"; CHAT_ID="${CHAT_ID#\"}"
+          CHAT_ID="${CHAT_ID%\'}"; CHAT_ID="${CHAT_ID#\'}"
+
+          case "$STATUS" in
+            success) STATUS_LABEL="성공"; STATUS_ICON="✅" ;;
+            failure) STATUS_LABEL="실패"; STATUS_ICON="❌" ;;
+            cancelled) STATUS_LABEL="취소"; STATUS_ICON="⚠️" ;;
+            *) STATUS_LABEL="$STATUS"; STATUS_ICON="ℹ️" ;;
+          esac
+
+          SHORT_SHA="${COMMIT_SHA:0:7}"
+          MESSAGE=$(printf '%s\n' \
+            "${SERVICE_ICON} ${SERVICE_NAME} Actions 알림" \
+            "" \
+            "상태: ${STATUS_ICON} ${STATUS_LABEL}" \
+            "레포: ${REPOSITORY}" \
+            "워크플로우: ${WORKFLOW}" \
+            "잡: ${JOB}" \
+            "브랜치: ${BRANCH}" \
+            "실행자: ${ACTOR}" \
+            "이벤트: ${EVENT_NAME}" \
+            "커밋: ${SHORT_SHA}" \
+            "" \
+            "실행 로그:" \
+            "${RUN_URL}" \
+            "" \
+            "${EXTRA_LABEL}:" \
+            "${EXTRA_URL}")
+
+          RESPONSE_FILE="${RUNNER_TEMP}/telegram-response.json"
+          HTTP_CODE=$(curl -sS -o "$RESPONSE_FILE" -w "%{http_code}" \
+            -X POST "https://api.telegram.org/bot${BOT_TOKEN}/sendMessage" \
+            -d "chat_id=${CHAT_ID}" \
+            -d "disable_web_page_preview=true" \
+            --data-urlencode "text=${MESSAGE}" \
+            || true)
+
+          if [ "$HTTP_CODE" -lt 200 ] || [ "$HTTP_CODE" -ge 300 ]; then
+            echo "Telegram notification failed with HTTP ${HTTP_CODE}."
+            cat "$RESPONSE_FILE" || true
+          fi
