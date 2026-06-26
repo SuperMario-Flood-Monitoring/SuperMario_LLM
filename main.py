@@ -116,7 +116,7 @@ def _build_context_summary(analysis_input: dict) -> dict:
     }
 
 
-@app.post("/maintenance/log")
+@api.post("/maintenance/log")
 async def maintenance_log(request: MaintenanceLogRequest):
     try:
         result = log_maintenance_case(request.model_dump())

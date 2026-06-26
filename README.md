@@ -16,6 +16,7 @@ FastAPI + LangChain 기반 침수 위험 분석 서버입니다.
 ```text
 GET  /llm/health
 POST /llm/analyze
+POST /llm/maintenance/log
 ```
 
 ## Local 실행
