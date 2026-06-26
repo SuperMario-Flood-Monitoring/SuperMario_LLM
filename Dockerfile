@@ -9,7 +9,7 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY main.py analyzer.py telegram_notifier.py scenarios.py ./
+COPY main.py analyzer.py telegram_notifier.py scenarios.py swmm_formatter.py maintenance_store.py ./
 
 EXPOSE 8000
 
