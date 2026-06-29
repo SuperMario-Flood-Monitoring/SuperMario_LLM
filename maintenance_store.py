@@ -125,6 +125,25 @@ def format_maintenance_case(payload: dict[str, Any]) -> str:
             f"모델 시각: {_string_or_none(event.get('model_time')) or '미상'}",
             f"실행 ID: {_string_or_none(event.get('run_id')) or '미상'}",
             f"스텝: {_string_or_none(event.get('step_index')) or '미상'}",
+        ]
+    )
+
+    priority = event.get("priority") if isinstance(event.get("priority"), dict) else {}
+    if priority:
+        reasons = priority.get("priorityReasons")
+        reason_text = ", ".join(str(reason) for reason in reasons) if isinstance(reasons, list) else ""
+        lines.extend(
+            [
+                "",
+                "현장 조치 우선순위:",
+                f"- 등급: {_string_or_none(priority.get('priorityBand')) or '미상'}",
+                f"- 점수: {_string_or_none(priority.get('priorityScore')) or '미상'}",
+                f"- 근거: {reason_text or '없음'}",
+            ]
+        )
+
+    lines.extend(
+        [
             "",
             "주요 지표:",
         ]
@@ -175,6 +194,10 @@ def log_maintenance_case(payload: dict[str, Any]) -> dict[str, Any]:
         "actionStatus": str(action.get("status", "")),
         "resultStatus": str(action.get("result_status", "")),
     }
+    priority = event.get("priority") if isinstance(event.get("priority"), dict) else {}
+    if priority:
+        metadata["priorityBand"] = str(priority.get("priorityBand", ""))
+        metadata["priorityScore"] = str(priority.get("priorityScore", ""))
 
     collection.add(
         ids=[log_id],

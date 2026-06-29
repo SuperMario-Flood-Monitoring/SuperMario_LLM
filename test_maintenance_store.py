@@ -30,6 +30,11 @@ def test_format_maintenance_case_from_django_payload():
             "hazard_type": "REVERSE_FLOW",
             "hazard_level": "CRITICAL",
             "hazard_detail": "파이프 PIPE_1에서 역류가 감지되었습니다.",
+            "priority": {
+                "priorityScore": 92,
+                "priorityBand": "P1",
+                "priorityReasons": ["CRITICAL 위험", "만관 위험"],
+            },
             "created_at": "2026-06-26T15:51:00",
         },
         "metrics": {
@@ -55,6 +60,9 @@ def test_format_maintenance_case_from_django_payload():
     assert "[도시침수 위험 대응 사례]" in formatted
     assert "시설 ID: PIPE_1" in formatted
     assert "위험 유형: REVERSE_FLOW" in formatted
+    assert "현장 조치 우선순위:" in formatted
+    assert "- 등급: P1" in formatted
+    assert "- 점수: 92" in formatted
     assert "- 유량: -0.034 m3/s" in formatted
     assert "- 만관율: 92.0%" in formatted
     assert "- 초기 조치: 하류 관로 현장 점검 완료" in formatted

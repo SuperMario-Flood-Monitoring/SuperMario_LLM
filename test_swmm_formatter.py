@@ -80,8 +80,9 @@ def test_build_llm_message_contains_explicit_sections():
     assert '"editorObject":' in message
     assert "pipe_free_1781771885636" in message
     assert "CONN_COMB_01" in message
-    assert "- link:" in message
-    assert "- editor object:" in message
+    assert "- 관로:" in message
+    assert "- 맨홀/집수구/주변 지점:" in message
+    assert "- editor object:" not in message
 
 
 def test_format_dispatch_key_only_payload():
@@ -103,4 +104,89 @@ def test_format_dispatch_key_only_payload():
     assert len(payload["link"]) == 1
     assert payload["link"][0]["id"] == "pipe_free_1781772019999"
     assert payload["swmmIssues"][0]["eventCode"] == "REVERSE_FLOW"
+
+
+def test_build_analysis_payload_preserves_django_priority_targets():
+    forecast_payload = {
+        "schemaVersion": 1,
+        "contextLevel": "forecast",
+        "simulation": {
+            "runId": "run-1",
+            "stepIndex": 10,
+            "modelTime": "2026-06-16T00:01:00",
+            "forecastMinutes": 10,
+            "windowSeconds": 120,
+        },
+        "highestSeverity": "CRITICAL",
+        "riskEvents": [
+            {
+                "eventId": "PREDICTED_FULL_PIPE:link:PIPE_1",
+                "eventType": "PREDICTED_FULL_PIPE",
+                "severity": "CRITICAL",
+                "source": "link",
+                "sourceId": "PIPE_1",
+                "metrics": {
+                    "metric": "fullness",
+                    "currentValue": 0.9,
+                    "predictedValue": 0.99,
+                    "forecastMinutes": 10,
+                },
+                "priorityScore": 92,
+                "priorityBand": "P1",
+                "priorityReasons": ["CRITICAL 위험", "만관 위험", "예측 증가량 0.09"],
+            },
+            {
+                "eventId": "PREDICTED_NODE_DEPTH:node:NODE_1",
+                "eventType": "PREDICTED_NODE_DEPTH",
+                "severity": "CRITICAL",
+                "source": "node",
+                "sourceId": "NODE_1",
+                "metrics": {
+                    "metric": "depthRatio",
+                    "currentValue": 0.7,
+                    "predictedValue": 0.91,
+                    "forecastMinutes": 10,
+                },
+                "priorityScore": 88,
+                "priorityBand": "P1",
+                "priorityReasons": ["CRITICAL 위험", "node 수위 위험"],
+            },
+        ],
+    }
+
+    payload = build_analysis_payload("폭우", {"RN-60m": 75.0}, json.dumps(forecast_payload))
+
+    assert payload["swmmSimulation"]["runId"] == "run-1"
+    assert payload["swmmSimulation"]["forecastMinutes"] == 10
+    assert payload["link"][0]["id"] == "PIPE_1"
+    assert payload["node"][0]["id"] == "NODE_1"
+    assert payload["swmmIssues"][0]["priorityBand"] == "P1"
+    assert payload["priorityTargets"][0]["targetId"] == "PIPE_1"
+    assert payload["priorityTargets"][0]["priorityScore"] == 92
+    assert payload["priorityTargets"][0]["prioritySource"] == "django"
+    assert payload["priorityTargets"][1]["targetId"] == "NODE_1"
+
+
+def test_build_analysis_payload_creates_fallback_priority_when_missing():
+    forecast_payload = {
+        "highestSeverity": "CRITICAL",
+        "riskEvents": [
+            {
+                "eventId": "PREDICTED_CAPACITY_EXCEEDED:link:PIPE_9",
+                "eventType": "PREDICTED_CAPACITY_EXCEEDED",
+                "severity": "CRITICAL",
+                "source": "link",
+                "sourceId": "PIPE_9",
+                "metrics": {"capacityRatio": 1.2},
+            }
+        ],
+    }
+
+    payload = build_analysis_payload("폭우", {"RN-60m": 75.0}, json.dumps(forecast_payload))
+
+    priority = payload["priorityTargets"][0]
+    assert priority["targetId"] == "PIPE_9"
+    assert priority["prioritySource"] == "fallback"
+    assert priority["priorityBand"] in {"P1", "P2"}
+    assert "관로 용량 초과 위험" in priority["priorityReasons"]
 

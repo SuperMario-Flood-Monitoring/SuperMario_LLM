@@ -74,6 +74,7 @@ class MaintenanceEvent(BaseModel):
     hazard_type: str | None = None
     hazard_level: str | None = None
     hazard_detail: str | None = None
+    priority: dict[str, Any] | None = None
     created_at: str | None = None
 
 
@@ -108,15 +109,18 @@ def _build_context_summary(analysis_input: dict) -> dict:
         "nodeCount": len(analysis_input.get("node", [])),
         "editorObjectCount": len(analysis_input.get("editorObject", [])),
         "issueCount": len(analysis_input.get("swmmIssues", [])),
+        "priorityTargetCount": len(analysis_input.get("priorityTargets", [])),
         "link": analysis_input.get("link", []),
         "node": analysis_input.get("node", []),
         "editorObject": analysis_input.get("editorObject", []),
+        "priorityTargets": analysis_input.get("priorityTargets", []),
         "pastHistoryCount": len(analysis_input.get("past_history", [])),
         "past_history": analysis_input.get("past_history", []),
     }
 
 
 @api.post("/maintenance/log")
+@api.post("/maintenance/log/")
 async def maintenance_log(request: MaintenanceLogRequest):
     try:
         result = log_maintenance_case(request.model_dump())
