@@ -2,7 +2,7 @@
 
 ## 문서 정보
 
-- 기준일: 2026-06-26
+- 기준일: 2026-06-29
 - 기준 구현: `main.py`, `swmm_formatter.py`, `maintenance_store.py`, `analyzer.py`, `telegram_notifier.py`
 - 서비스: SuperMario LLM Server
 - Local Base URL: `http://127.0.0.1:8001`
@@ -36,6 +36,8 @@ FastAPI/LangChain 서버가 실제로 제공하는 API만 정리한다.
 | `LLM_API_PREFIX`     | `/llm`          | health/analyze/maintenance 계열 API prefix                           |
 | `OPENAI_API_KEY`     | 없음            | ChatOpenAI 분석과 OpenAIEmbeddings 생성에 필요                       |
 | `CHROMA_PERSIST_DIR` | `./chroma_data` | ChromaDB persist 경로                                                |
+| `LLM_DEBUG_LOG_ENABLED` | `true`       | LLM 호출 입력/답변 debug log 저장 여부                               |
+| `LLM_DEBUG_LOG_DIR` | `llm-debug`      | LLM debug log 저장 경로                                              |
 | `TELEGRAM_BOT_TOKEN` | 없음            | `test_bot.py setup`용. 실제 `/llm/analyze`는 요청 body의 토큰을 사용 |
 
 Docker Compose 실행 시 host `8001` 포트가 container `8000` 포트로 연결된다.
