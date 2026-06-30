@@ -4,7 +4,8 @@
 
 `POST /llm/analyze`는 Django가 전달한 강수 상황과 위험 데이터를 정형화한 뒤
 OpenAI Chat 모델로 현장 보고 문구를 생성한다. 생성된 문구는 요청 body에 포함된
-Telegram bot token과 chat id로 발송된다.
+Telegram bot token/chat id로 발송된다. 직접 호출에서 chat ID 필드가 생략된
+경우에만 서버 `.env`의 Telegram 값을 fallback으로 사용할 수 있다.
 
 주요 흐름:
 
@@ -54,4 +55,3 @@ Telegram bot token과 chat id로 발송된다.
 
 이 기능은 테스트용이며, `analyzer.py`의 import와 호출부를 제거하면 쉽게 분리할 수
 있다.
-

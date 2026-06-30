@@ -12,6 +12,10 @@
 ```
 
 `swmm_raw_data`는 JSON object 또는 JSON 문자열을 받을 수 있다.
+`TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID`는 선택 필드다. 토큰이 비어 있거나
+chat ID 필드가 생략되면 LLM 서버 `.env`의 Telegram 값을 fallback으로 사용한다.
+단, `TELEGRAM_CHAT_ID: []`처럼 빈 리스트가 명시되면 env chat ID로 대체하지
+않는다.
 
 ## LLM 입력 payload
 
@@ -87,4 +91,3 @@ Metadata:
 ```
 
 답변 로그는 LLM 답변 text를 그대로 저장한다.
-

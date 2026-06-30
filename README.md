@@ -38,8 +38,12 @@ cp .env.example .env
 | `CHROMA_PERSIST_DIR` | ChromaDB 저장 경로 |
 | `LLM_DEBUG_LOG_ENABLED` | LLM debug log 저장 여부 |
 | `LLM_DEBUG_LOG_DIR` | LLM debug log 저장 경로 |
+| `TELEGRAM_BOT_TOKEN` | `/llm/analyze` body에 토큰이 없을 때 사용할 Telegram bot token |
+| `TELEGRAM_CHAT_ID` | `/llm/analyze` body에 chat id가 없을 때 사용할 Telegram chat id. 여러 개는 콤마로 구분 |
 
-Telegram 메시지 발송은 `/llm/analyze` 요청 body의 `TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID`를 사용한다. `.env`의 Telegram 값은 로컬 `test_bot.py setup` 용도다.
+Telegram 메시지 발송은 `/llm/analyze` 요청 body의 `TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID`를 우선 사용한다. body에서 토큰이 비어 있거나 chat ID 필드가 생략되면 `.env`의 Telegram 값을 fallback으로 사용한다. 단, `TELEGRAM_CHAT_ID: []`처럼 빈 리스트가 명시되면 DB 수신자가 없는 상태로 보고 env chat ID로 대체하지 않는다. 운영 Docker Compose에서는 Infra가 생성한 `.env`가 LLM 컨테이너에도 주입된다.
+
+현재 운영 배포에서는 LLM 이미지에 secret을 굽지 않는다. `SuperMario_Infra`의 `PRODUCTION_ENV_YAML_B64`가 서버 `.env`로 렌더링되고, `llm-blue`/`llm-green` 컨테이너가 해당 `.env`를 `env_file`로 읽는다.
 
 ## 로컬 실행
 

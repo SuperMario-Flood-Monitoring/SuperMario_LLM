@@ -25,8 +25,9 @@
 ## Telegram
 
 - `python-telegram-bot`
-- `/llm/analyze` 요청 body의 `TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID`를 사용한다.
-- `.env`의 Telegram 값은 로컬 `test_bot.py setup` 용도다.
+- `/llm/analyze` 요청 body의 `TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID`를 우선 사용한다.
+- body에서 bot token이 비어 있거나 chat ID 필드가 생략되면 `.env`의 Telegram 값을 fallback으로 사용한다.
+- `TELEGRAM_CHAT_ID: []`처럼 빈 리스트가 명시된 경우에는 env chat ID로 대체하지 않는다.
 
 ## Docker
 
@@ -44,4 +45,3 @@
 docker compose down
 docker compose up -d --build
 ```
-

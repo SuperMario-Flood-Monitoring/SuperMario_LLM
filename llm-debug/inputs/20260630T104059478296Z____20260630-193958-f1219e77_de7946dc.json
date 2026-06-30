@@ -1,0 +1,1533 @@
+{
+  "debugId": "20260630T104059478296Z____20260630-193958-f1219e77_de7946dc",
+  "loggedAt": "2026-06-30T10:40:59.478351+00:00",
+  "analysisInput": {
+    "scenarioId": "폭우",
+    "weatherObservation": {
+      "YYMMDDHHMI": "202606151500",
+      "STN": "90",
+      "WD1": 270.5,
+      "WS1": 8.5,
+      "WDS": 280.0,
+      "WSS": 12.0,
+      "WD10": 265.0,
+      "WS10": 7.8,
+      "TA": 18.5,
+      "RE": 1.0,
+      "RN-15m": 25.0,
+      "RN-60m": 75.0,
+      "RN-12H": 150.0,
+      "RN-DAY": 200.0,
+      "HM": 98.0,
+      "PA": 1002.0,
+      "PS": 1005.5,
+      "TD": 18.0
+    },
+    "link": [
+      {
+        "id": "pipeSegment_copy_1782806971818_1",
+        "role": "이슈 발생 지점",
+        "eventSummary": "막힘 폐쇄 예측(치명)",
+        "metric": "blockageRatio",
+        "currentValue": 1.0,
+        "predictedValue": 1.0,
+        "slopePerSecond": 0.0,
+        "minCurrentValue": 0.8,
+        "rainfallLevel": "heavy",
+        "forecastMinutes": 10
+      },
+      {
+        "id": "link_copy_1782806971818_15_CONDUIT",
+        "role": "이슈 발생 지점",
+        "eventSummary": "만관 예측(치명), 관로 용량 초과 예측(치명)",
+        "metric": "capacityRatio",
+        "currentValue": 0.0509601868606134,
+        "predictedValue": 2.767456995713616,
+        "slopePerSecond": 0.004527494681421671,
+        "minCurrentValue": 0.05,
+        "rainfallLevel": "heavy",
+        "forecastMinutes": 10
+      },
+      {
+        "id": "link_copy_1782806971818_3_CONDUIT",
+        "role": "이슈 발생 지점",
+        "eventSummary": "만관 예측(치명), 관로 용량 초과 예측(치명)",
+        "metric": "capacityRatio",
+        "currentValue": 0.050959080856645265,
+        "predictedValue": 2.7674558897096477,
+        "slopePerSecond": 0.004527494681421671,
+        "minCurrentValue": 0.05,
+        "rainfallLevel": "heavy",
+        "forecastMinutes": 10
+      },
+      {
+        "id": "link_copy_1782806971818_9_CONDUIT",
+        "role": "이슈 발생 지점",
+        "eventSummary": "만관 예측(치명), 관로 용량 초과 예측(치명)",
+        "metric": "capacityRatio",
+        "currentValue": 0.05095803582934069,
+        "predictedValue": 2.7674548446823435,
+        "slopePerSecond": 0.004527494681421671,
+        "minCurrentValue": 0.05,
+        "rainfallLevel": "heavy",
+        "forecastMinutes": 10
+      },
+      {
+        "id": "pipeSegment_copy_1782806971818_2",
+        "role": "이슈 발생 지점",
+        "eventSummary": "만관 예측(치명)",
+        "metric": "fullness",
+        "currentValue": 0.11370655038722612,
+        "predictedValue": 2.0,
+        "slopePerSecond": 0.007304085280588198,
+        "minCurrentValue": 0.05,
+        "rainfallLevel": "heavy",
+        "forecastMinutes": 10
+      },
+      {
+        "id": "pipeSegment_copy_1782806971818_5",
+        "role": "이슈 발생 지점",
+        "eventSummary": "만관 예측(치명)",
+        "metric": "fullness",
+        "currentValue": 0.11365498702496507,
+        "predictedValue": 2.0,
+        "slopePerSecond": 0.007304085280588198,
+        "minCurrentValue": 0.05,
+        "rainfallLevel": "heavy",
+        "forecastMinutes": 10
+      },
+      {
+        "id": "pipeSegment_copy_1782806971818_6",
+        "role": "이슈 발생 지점",
+        "eventSummary": "만관 예측(치명)",
+        "metric": "fullness",
+        "currentValue": 0.050006325488856425,
+        "predictedValue": 1.5942670468855442,
+        "slopePerSecond": 0.0025737678689944795,
+        "minCurrentValue": 0.05,
+        "rainfallLevel": "heavy",
+        "forecastMinutes": 10
+      },
+      {
+        "id": "pipeSegment_copy_1782806971818_8",
+        "role": "이슈 발생 지점",
+        "eventSummary": "만관 예측(치명)",
+        "metric": "fullness",
+        "currentValue": 0.1137545388550746,
+        "predictedValue": 2.0,
+        "slopePerSecond": 0.007304085280588198,
+        "minCurrentValue": 0.05,
+        "rainfallLevel": "heavy",
+        "forecastMinutes": 10
+      },
+      {
+        "id": "pipeSegment_copy_1782806971818_3",
+        "role": "이슈 발생 지점",
+        "eventSummary": "만관 예측(치명)",
+        "metric": "fullness",
+        "currentValue": 0.054915443691418604,
+        "predictedValue": 1.9520649220643225,
+        "slopePerSecond": 0.0031619157972881734,
+        "minCurrentValue": 0.05,
+        "rainfallLevel": "heavy",
+        "forecastMinutes": 10
+      },
+      {
+        "id": "pipeSegment_copy_1782806971818_9",
+        "role": "이슈 발생 지점",
+        "eventSummary": "만관 예측(치명)",
+        "metric": "fullness",
+        "currentValue": 0.05418601708074528,
+        "predictedValue": 1.942825356862004,
+        "slopePerSecond": 0.0031477322329687644,
+        "minCurrentValue": 0.05,
+        "rainfallLevel": "heavy",
+        "forecastMinutes": 10
+      },
+      {
+        "id": "pipeSegment_copy_1782806971818_7",
+        "role": "이슈 발생 지점",
+        "eventSummary": "만관 예측(치명)",
+        "metric": "fullness",
+        "currentValue": 0.052212485026277254,
+        "predictedValue": 0.9931080569686821,
+        "slopePerSecond": 0.0015681592865706747,
+        "minCurrentValue": 0.05,
+        "rainfallLevel": "heavy",
+        "forecastMinutes": 10
+      },
+      {
+        "id": "pipeSegment_copy_1782806971818_10",
+        "role": "이슈 발생 지점",
+        "eventSummary": "만관 예측(치명)",
+        "metric": "fullness",
+        "currentValue": 0.05268047282551641,
+        "predictedValue": 0.9518682172063269,
+        "slopePerSecond": 0.0014986462406346842,
+        "minCurrentValue": 0.05,
+        "rainfallLevel": "heavy",
+        "forecastMinutes": 10
+      }
+    ],
+    "node": [
+      {
+        "id": "catchBasin_copy_1782806971818_1",
+        "role": "이슈 발생 지점",
+        "eventSummary": "수위 상승 예측(치명)",
+        "metric": "depthRatio",
+        "currentValue": 0.1255254352786932,
+        "predictedValue": 2.0,
+        "slopePerSecond": 0.007883047324917514,
+        "minCurrentValue": 0.05,
+        "rainfallLevel": "heavy",
+        "forecastMinutes": 10
+      },
+      {
+        "id": "catchBasin_copy_1782806971818_2",
+        "role": "이슈 발생 지점",
+        "eventSummary": "수위 상승 예측(치명)",
+        "metric": "depthRatio",
+        "currentValue": 0.12552564009248993,
+        "predictedValue": 2.0,
+        "slopePerSecond": 0.007883047324917514,
+        "minCurrentValue": 0.05,
+        "rainfallLevel": "heavy",
+        "forecastMinutes": 10
+      },
+      {
+        "id": "catchBasin_copy_1782806971818_3",
+        "role": "이슈 발생 지점",
+        "eventSummary": "수위 상승 예측(치명)",
+        "metric": "depthRatio",
+        "currentValue": 0.12552518089705683,
+        "predictedValue": 2.0,
+        "slopePerSecond": 0.007883047324917514,
+        "minCurrentValue": 0.05,
+        "rainfallLevel": "heavy",
+        "forecastMinutes": 10
+      }
+    ],
+    "editorObject": [],
+    "swmmSimulation": {
+      "runId": "20260630-193958-f1219e77",
+      "stepIndex": 0,
+      "forecastMinutes": 10,
+      "windowSeconds": 0,
+      "control": {
+        "rainfallRatio": 5.0,
+        "rainfallPercent": 500.0,
+        "blockagesById": {
+          "pipeSegment_copy_1782806971818_1": 1.0
+        },
+        "maxRainfallMmPerHour": 100.0,
+        "speedMultiplier": 1.0
+      },
+      "highestSeverity": "치명",
+      "highestSeverityCode": "CRITICAL",
+      "contextLevel": "forecast",
+      "schemaVersion": 1,
+      "systemMeta": {
+        "sourceService": "SuperMario_Django",
+        "targetService": "SuperMario_LLM",
+        "dispatchStatus": "not_called",
+        "triggerBasis": "forecast"
+      }
+    },
+    "swmmIssues": [
+      {
+        "summary": "pipeSegment_copy_1782806971818_1(pipeSegment_copy_1782806971818_1)에서 막힘 폐쇄 예측(치명) 발생",
+        "event": "막힘 폐쇄 예측",
+        "eventCode": "PREDICTED_BLOCKAGE_CLOSED",
+        "severity": "치명",
+        "severityCode": "CRITICAL",
+        "issueId": "PREDICTED_BLOCKAGE_CLOSED:link:pipeSegment_copy_1782806971818_1",
+        "primaryElement": {
+          "category": "link",
+          "id": "pipeSegment_copy_1782806971818_1"
+        },
+        "connectedElements": [],
+        "metrics": {
+          "metric": "blockageRatio",
+          "currentValue": 1.0,
+          "predictedValue": 1.0,
+          "slopePerSecond": 0.0,
+          "minCurrentValue": 0.8,
+          "rainfallLevel": "heavy",
+          "forecastMinutes": 10
+        },
+        "priority": {
+          "priorityScore": 185.0,
+          "priorityBand": "P1",
+          "priorityReasons": [
+            "CRITICAL 위험",
+            "막힘 위험",
+            "막힘 비율 100%"
+          ],
+          "source": "django"
+        },
+        "priorityScore": 185.0,
+        "priorityBand": "P1",
+        "priorityReasons": [
+          "CRITICAL 위험",
+          "막힘 위험",
+          "막힘 비율 100%"
+        ]
+      },
+      {
+        "summary": "catchBasin_copy_1782806971818_1(catchBasin_copy_1782806971818_1)에서 수위 상승 예측(치명) 발생",
+        "event": "수위 상승 예측",
+        "eventCode": "PREDICTED_NODE_DEPTH",
+        "severity": "치명",
+        "severityCode": "CRITICAL",
+        "issueId": "PREDICTED_NODE_DEPTH:node:catchBasin_copy_1782806971818_1",
+        "primaryElement": {
+          "category": "node",
+          "id": "catchBasin_copy_1782806971818_1"
+        },
+        "connectedElements": [],
+        "metrics": {
+          "metric": "depthRatio",
+          "currentValue": 0.1255254352786932,
+          "predictedValue": 2.0,
+          "slopePerSecond": 0.007883047324917514,
+          "minCurrentValue": 0.05,
+          "rainfallLevel": "heavy",
+          "forecastMinutes": 10
+        },
+        "priority": {
+          "priorityScore": 223.0,
+          "priorityBand": "P1",
+          "priorityReasons": [
+            "CRITICAL 위험",
+            "node 수위 위험",
+            "node 위험은 현장 침수 접점에 가까움",
+            "node 수위 비율 200.0%",
+            "예측 증가량 1.874",
+            "예측 상승 기울기 0.00788305/s"
+          ],
+          "source": "django"
+        },
+        "priorityScore": 223.0,
+        "priorityBand": "P1",
+        "priorityReasons": [
+          "CRITICAL 위험",
+          "node 수위 위험",
+          "node 위험은 현장 침수 접점에 가까움",
+          "node 수위 비율 200.0%",
+          "예측 증가량 1.874",
+          "예측 상승 기울기 0.00788305/s"
+        ]
+      },
+      {
+        "summary": "catchBasin_copy_1782806971818_2(catchBasin_copy_1782806971818_2)에서 수위 상승 예측(치명) 발생",
+        "event": "수위 상승 예측",
+        "eventCode": "PREDICTED_NODE_DEPTH",
+        "severity": "치명",
+        "severityCode": "CRITICAL",
+        "issueId": "PREDICTED_NODE_DEPTH:node:catchBasin_copy_1782806971818_2",
+        "primaryElement": {
+          "category": "node",
+          "id": "catchBasin_copy_1782806971818_2"
+        },
+        "connectedElements": [],
+        "metrics": {
+          "metric": "depthRatio",
+          "currentValue": 0.12552564009248993,
+          "predictedValue": 2.0,
+          "slopePerSecond": 0.007883047324917514,
+          "minCurrentValue": 0.05,
+          "rainfallLevel": "heavy",
+          "forecastMinutes": 10
+        },
+        "priority": {
+          "priorityScore": 223.0,
+          "priorityBand": "P1",
+          "priorityReasons": [
+            "CRITICAL 위험",
+            "node 수위 위험",
+            "node 위험은 현장 침수 접점에 가까움",
+            "node 수위 비율 200.0%",
+            "예측 증가량 1.874",
+            "예측 상승 기울기 0.00788305/s"
+          ],
+          "source": "django"
+        },
+        "priorityScore": 223.0,
+        "priorityBand": "P1",
+        "priorityReasons": [
+          "CRITICAL 위험",
+          "node 수위 위험",
+          "node 위험은 현장 침수 접점에 가까움",
+          "node 수위 비율 200.0%",
+          "예측 증가량 1.874",
+          "예측 상승 기울기 0.00788305/s"
+        ]
+      },
+      {
+        "summary": "catchBasin_copy_1782806971818_3(catchBasin_copy_1782806971818_3)에서 수위 상승 예측(치명) 발생",
+        "event": "수위 상승 예측",
+        "eventCode": "PREDICTED_NODE_DEPTH",
+        "severity": "치명",
+        "severityCode": "CRITICAL",
+        "issueId": "PREDICTED_NODE_DEPTH:node:catchBasin_copy_1782806971818_3",
+        "primaryElement": {
+          "category": "node",
+          "id": "catchBasin_copy_1782806971818_3"
+        },
+        "connectedElements": [],
+        "metrics": {
+          "metric": "depthRatio",
+          "currentValue": 0.12552518089705683,
+          "predictedValue": 2.0,
+          "slopePerSecond": 0.007883047324917514,
+          "minCurrentValue": 0.05,
+          "rainfallLevel": "heavy",
+          "forecastMinutes": 10
+        },
+        "priority": {
+          "priorityScore": 223.0,
+          "priorityBand": "P1",
+          "priorityReasons": [
+            "CRITICAL 위험",
+            "node 수위 위험",
+            "node 위험은 현장 침수 접점에 가까움",
+            "node 수위 비율 200.0%",
+            "예측 증가량 1.874",
+            "예측 상승 기울기 0.00788305/s"
+          ],
+          "source": "django"
+        },
+        "priorityScore": 223.0,
+        "priorityBand": "P1",
+        "priorityReasons": [
+          "CRITICAL 위험",
+          "node 수위 위험",
+          "node 위험은 현장 침수 접점에 가까움",
+          "node 수위 비율 200.0%",
+          "예측 증가량 1.874",
+          "예측 상승 기울기 0.00788305/s"
+        ]
+      },
+      {
+        "summary": "link_copy_1782806971818_15_CONDUIT(link_copy_1782806971818_15_CONDUIT)에서 만관 예측(치명) 발생",
+        "event": "만관 예측",
+        "eventCode": "PREDICTED_FULL_PIPE",
+        "severity": "치명",
+        "severityCode": "CRITICAL",
+        "issueId": "PREDICTED_FULL_PIPE:link:link_copy_1782806971818_15_CONDUIT",
+        "primaryElement": {
+          "category": "link",
+          "id": "link_copy_1782806971818_15_CONDUIT"
+        },
+        "connectedElements": [],
+        "metrics": {
+          "metric": "fullness",
+          "currentValue": 0.08018355403320036,
+          "predictedValue": 2.0,
+          "slopePerSecond": 0.006883408371033253,
+          "minCurrentValue": 0.05,
+          "rainfallLevel": "heavy",
+          "forecastMinutes": 10
+        },
+        "priority": {
+          "priorityScore": 203.0,
+          "priorityBand": "P1",
+          "priorityReasons": [
+            "CRITICAL 위험",
+            "만관 위험",
+            "만관율 200.0%",
+            "예측 증가량 1.920",
+            "예측 상승 기울기 0.00688341/s"
+          ],
+          "source": "django"
+        },
+        "priorityScore": 203.0,
+        "priorityBand": "P1",
+        "priorityReasons": [
+          "CRITICAL 위험",
+          "만관 위험",
+          "만관율 200.0%",
+          "예측 증가량 1.920",
+          "예측 상승 기울기 0.00688341/s"
+        ]
+      },
+      {
+        "summary": "link_copy_1782806971818_3_CONDUIT(link_copy_1782806971818_3_CONDUIT)에서 만관 예측(치명) 발생",
+        "event": "만관 예측",
+        "eventCode": "PREDICTED_FULL_PIPE",
+        "severity": "치명",
+        "severityCode": "CRITICAL",
+        "issueId": "PREDICTED_FULL_PIPE:link:link_copy_1782806971818_3_CONDUIT",
+        "primaryElement": {
+          "category": "link",
+          "id": "link_copy_1782806971818_3_CONDUIT"
+        },
+        "connectedElements": [],
+        "metrics": {
+          "metric": "fullness",
+          "currentValue": 0.08018529275913193,
+          "predictedValue": 2.0,
+          "slopePerSecond": 0.006883408371033253,
+          "minCurrentValue": 0.05,
+          "rainfallLevel": "heavy",
+          "forecastMinutes": 10
+        },
+        "priority": {
+          "priorityScore": 203.0,
+          "priorityBand": "P1",
+          "priorityReasons": [
+            "CRITICAL 위험",
+            "만관 위험",
+            "만관율 200.0%",
+            "예측 증가량 1.920",
+            "예측 상승 기울기 0.00688341/s"
+          ],
+          "source": "django"
+        },
+        "priorityScore": 203.0,
+        "priorityBand": "P1",
+        "priorityReasons": [
+          "CRITICAL 위험",
+          "만관 위험",
+          "만관율 200.0%",
+          "예측 증가량 1.920",
+          "예측 상승 기울기 0.00688341/s"
+        ]
+      },
+      {
+        "summary": "link_copy_1782806971818_9_CONDUIT(link_copy_1782806971818_9_CONDUIT)에서 만관 예측(치명) 발생",
+        "event": "만관 예측",
+        "eventCode": "PREDICTED_FULL_PIPE",
+        "severity": "치명",
+        "severityCode": "CRITICAL",
+        "issueId": "PREDICTED_FULL_PIPE:link:link_copy_1782806971818_9_CONDUIT",
+        "primaryElement": {
+          "category": "link",
+          "id": "link_copy_1782806971818_9_CONDUIT"
+        },
+        "connectedElements": [],
+        "metrics": {
+          "metric": "fullness",
+          "currentValue": 0.0801869618767293,
+          "predictedValue": 2.0,
+          "slopePerSecond": 0.006883408371033253,
+          "minCurrentValue": 0.05,
+          "rainfallLevel": "heavy",
+          "forecastMinutes": 10
+        },
+        "priority": {
+          "priorityScore": 203.0,
+          "priorityBand": "P1",
+          "priorityReasons": [
+            "CRITICAL 위험",
+            "만관 위험",
+            "만관율 200.0%",
+            "예측 증가량 1.920",
+            "예측 상승 기울기 0.00688341/s"
+          ],
+          "source": "django"
+        },
+        "priorityScore": 203.0,
+        "priorityBand": "P1",
+        "priorityReasons": [
+          "CRITICAL 위험",
+          "만관 위험",
+          "만관율 200.0%",
+          "예측 증가량 1.920",
+          "예측 상승 기울기 0.00688341/s"
+        ]
+      },
+      {
+        "summary": "pipeSegment_copy_1782806971818_2(pipeSegment_copy_1782806971818_2)에서 만관 예측(치명) 발생",
+        "event": "만관 예측",
+        "eventCode": "PREDICTED_FULL_PIPE",
+        "severity": "치명",
+        "severityCode": "CRITICAL",
+        "issueId": "PREDICTED_FULL_PIPE:link:pipeSegment_copy_1782806971818_2",
+        "primaryElement": {
+          "category": "link",
+          "id": "pipeSegment_copy_1782806971818_2"
+        },
+        "connectedElements": [],
+        "metrics": {
+          "metric": "fullness",
+          "currentValue": 0.11370655038722612,
+          "predictedValue": 2.0,
+          "slopePerSecond": 0.007304085280588198,
+          "minCurrentValue": 0.05,
+          "rainfallLevel": "heavy",
+          "forecastMinutes": 10
+        },
+        "priority": {
+          "priorityScore": 203.0,
+          "priorityBand": "P1",
+          "priorityReasons": [
+            "CRITICAL 위험",
+            "만관 위험",
+            "만관율 200.0%",
+            "예측 증가량 1.886",
+            "예측 상승 기울기 0.00730409/s"
+          ],
+          "source": "django"
+        },
+        "priorityScore": 203.0,
+        "priorityBand": "P1",
+        "priorityReasons": [
+          "CRITICAL 위험",
+          "만관 위험",
+          "만관율 200.0%",
+          "예측 증가량 1.886",
+          "예측 상승 기울기 0.00730409/s"
+        ]
+      },
+      {
+        "summary": "pipeSegment_copy_1782806971818_5(pipeSegment_copy_1782806971818_5)에서 만관 예측(치명) 발생",
+        "event": "만관 예측",
+        "eventCode": "PREDICTED_FULL_PIPE",
+        "severity": "치명",
+        "severityCode": "CRITICAL",
+        "issueId": "PREDICTED_FULL_PIPE:link:pipeSegment_copy_1782806971818_5",
+        "primaryElement": {
+          "category": "link",
+          "id": "pipeSegment_copy_1782806971818_5"
+        },
+        "connectedElements": [],
+        "metrics": {
+          "metric": "fullness",
+          "currentValue": 0.11365498702496507,
+          "predictedValue": 2.0,
+          "slopePerSecond": 0.007304085280588198,
+          "minCurrentValue": 0.05,
+          "rainfallLevel": "heavy",
+          "forecastMinutes": 10
+        },
+        "priority": {
+          "priorityScore": 203.0,
+          "priorityBand": "P1",
+          "priorityReasons": [
+            "CRITICAL 위험",
+            "만관 위험",
+            "만관율 200.0%",
+            "예측 증가량 1.886",
+            "예측 상승 기울기 0.00730409/s"
+          ],
+          "source": "django"
+        },
+        "priorityScore": 203.0,
+        "priorityBand": "P1",
+        "priorityReasons": [
+          "CRITICAL 위험",
+          "만관 위험",
+          "만관율 200.0%",
+          "예측 증가량 1.886",
+          "예측 상승 기울기 0.00730409/s"
+        ]
+      },
+      {
+        "summary": "pipeSegment_copy_1782806971818_6(pipeSegment_copy_1782806971818_6)에서 만관 예측(치명) 발생",
+        "event": "만관 예측",
+        "eventCode": "PREDICTED_FULL_PIPE",
+        "severity": "치명",
+        "severityCode": "CRITICAL",
+        "issueId": "PREDICTED_FULL_PIPE:link:pipeSegment_copy_1782806971818_6",
+        "primaryElement": {
+          "category": "link",
+          "id": "pipeSegment_copy_1782806971818_6"
+        },
+        "connectedElements": [],
+        "metrics": {
+          "metric": "fullness",
+          "currentValue": 0.050006325488856425,
+          "predictedValue": 1.5942670468855442,
+          "slopePerSecond": 0.0025737678689944795,
+          "minCurrentValue": 0.05,
+          "rainfallLevel": "heavy",
+          "forecastMinutes": 10
+        },
+        "priority": {
+          "priorityScore": 203.0,
+          "priorityBand": "P1",
+          "priorityReasons": [
+            "CRITICAL 위험",
+            "만관 위험",
+            "만관율 159.4%",
+            "예측 증가량 1.544",
+            "예측 상승 기울기 0.00257377/s"
+          ],
+          "source": "django"
+        },
+        "priorityScore": 203.0,
+        "priorityBand": "P1",
+        "priorityReasons": [
+          "CRITICAL 위험",
+          "만관 위험",
+          "만관율 159.4%",
+          "예측 증가량 1.544",
+          "예측 상승 기울기 0.00257377/s"
+        ]
+      },
+      {
+        "summary": "pipeSegment_copy_1782806971818_8(pipeSegment_copy_1782806971818_8)에서 만관 예측(치명) 발생",
+        "event": "만관 예측",
+        "eventCode": "PREDICTED_FULL_PIPE",
+        "severity": "치명",
+        "severityCode": "CRITICAL",
+        "issueId": "PREDICTED_FULL_PIPE:link:pipeSegment_copy_1782806971818_8",
+        "primaryElement": {
+          "category": "link",
+          "id": "pipeSegment_copy_1782806971818_8"
+        },
+        "connectedElements": [],
+        "metrics": {
+          "metric": "fullness",
+          "currentValue": 0.1137545388550746,
+          "predictedValue": 2.0,
+          "slopePerSecond": 0.007304085280588198,
+          "minCurrentValue": 0.05,
+          "rainfallLevel": "heavy",
+          "forecastMinutes": 10
+        },
+        "priority": {
+          "priorityScore": 203.0,
+          "priorityBand": "P1",
+          "priorityReasons": [
+            "CRITICAL 위험",
+            "만관 위험",
+            "만관율 200.0%",
+            "예측 증가량 1.886",
+            "예측 상승 기울기 0.00730409/s"
+          ],
+          "source": "django"
+        },
+        "priorityScore": 203.0,
+        "priorityBand": "P1",
+        "priorityReasons": [
+          "CRITICAL 위험",
+          "만관 위험",
+          "만관율 200.0%",
+          "예측 증가량 1.886",
+          "예측 상승 기울기 0.00730409/s"
+        ]
+      },
+      {
+        "summary": "link_copy_1782806971818_15_CONDUIT(link_copy_1782806971818_15_CONDUIT)에서 관로 용량 초과 예측(치명) 발생",
+        "event": "관로 용량 초과 예측",
+        "eventCode": "PREDICTED_CAPACITY_EXCEEDED",
+        "severity": "치명",
+        "severityCode": "CRITICAL",
+        "issueId": "PREDICTED_CAPACITY_EXCEEDED:link:link_copy_1782806971818_15_CONDUIT",
+        "primaryElement": {
+          "category": "link",
+          "id": "link_copy_1782806971818_15_CONDUIT"
+        },
+        "connectedElements": [],
+        "metrics": {
+          "metric": "capacityRatio",
+          "currentValue": 0.0509601868606134,
+          "predictedValue": 2.767456995713616,
+          "slopePerSecond": 0.004527494681421671,
+          "minCurrentValue": 0.05,
+          "rainfallLevel": "heavy",
+          "forecastMinutes": 10
+        },
+        "priority": {
+          "priorityScore": 210.0,
+          "priorityBand": "P1",
+          "priorityReasons": [
+            "CRITICAL 위험",
+            "용량 초과 위험",
+            "용량 비율 276.7%",
+            "예측 증가량 2.716",
+            "예측 상승 기울기 0.00452749/s"
+          ],
+          "source": "django"
+        },
+        "priorityScore": 210.0,
+        "priorityBand": "P1",
+        "priorityReasons": [
+          "CRITICAL 위험",
+          "용량 초과 위험",
+          "용량 비율 276.7%",
+          "예측 증가량 2.716",
+          "예측 상승 기울기 0.00452749/s"
+        ]
+      },
+      {
+        "summary": "link_copy_1782806971818_3_CONDUIT(link_copy_1782806971818_3_CONDUIT)에서 관로 용량 초과 예측(치명) 발생",
+        "event": "관로 용량 초과 예측",
+        "eventCode": "PREDICTED_CAPACITY_EXCEEDED",
+        "severity": "치명",
+        "severityCode": "CRITICAL",
+        "issueId": "PREDICTED_CAPACITY_EXCEEDED:link:link_copy_1782806971818_3_CONDUIT",
+        "primaryElement": {
+          "category": "link",
+          "id": "link_copy_1782806971818_3_CONDUIT"
+        },
+        "connectedElements": [],
+        "metrics": {
+          "metric": "capacityRatio",
+          "currentValue": 0.050959080856645265,
+          "predictedValue": 2.7674558897096477,
+          "slopePerSecond": 0.004527494681421671,
+          "minCurrentValue": 0.05,
+          "rainfallLevel": "heavy",
+          "forecastMinutes": 10
+        },
+        "priority": {
+          "priorityScore": 210.0,
+          "priorityBand": "P1",
+          "priorityReasons": [
+            "CRITICAL 위험",
+            "용량 초과 위험",
+            "용량 비율 276.7%",
+            "예측 증가량 2.716",
+            "예측 상승 기울기 0.00452749/s"
+          ],
+          "source": "django"
+        },
+        "priorityScore": 210.0,
+        "priorityBand": "P1",
+        "priorityReasons": [
+          "CRITICAL 위험",
+          "용량 초과 위험",
+          "용량 비율 276.7%",
+          "예측 증가량 2.716",
+          "예측 상승 기울기 0.00452749/s"
+        ]
+      },
+      {
+        "summary": "link_copy_1782806971818_9_CONDUIT(link_copy_1782806971818_9_CONDUIT)에서 관로 용량 초과 예측(치명) 발생",
+        "event": "관로 용량 초과 예측",
+        "eventCode": "PREDICTED_CAPACITY_EXCEEDED",
+        "severity": "치명",
+        "severityCode": "CRITICAL",
+        "issueId": "PREDICTED_CAPACITY_EXCEEDED:link:link_copy_1782806971818_9_CONDUIT",
+        "primaryElement": {
+          "category": "link",
+          "id": "link_copy_1782806971818_9_CONDUIT"
+        },
+        "connectedElements": [],
+        "metrics": {
+          "metric": "capacityRatio",
+          "currentValue": 0.05095803582934069,
+          "predictedValue": 2.7674548446823435,
+          "slopePerSecond": 0.004527494681421671,
+          "minCurrentValue": 0.05,
+          "rainfallLevel": "heavy",
+          "forecastMinutes": 10
+        },
+        "priority": {
+          "priorityScore": 210.0,
+          "priorityBand": "P1",
+          "priorityReasons": [
+            "CRITICAL 위험",
+            "용량 초과 위험",
+            "용량 비율 276.7%",
+            "예측 증가량 2.716",
+            "예측 상승 기울기 0.00452749/s"
+          ],
+          "source": "django"
+        },
+        "priorityScore": 210.0,
+        "priorityBand": "P1",
+        "priorityReasons": [
+          "CRITICAL 위험",
+          "용량 초과 위험",
+          "용량 비율 276.7%",
+          "예측 증가량 2.716",
+          "예측 상승 기울기 0.00452749/s"
+        ]
+      },
+      {
+        "summary": "pipeSegment_copy_1782806971818_3(pipeSegment_copy_1782806971818_3)에서 만관 예측(치명) 발생",
+        "event": "만관 예측",
+        "eventCode": "PREDICTED_FULL_PIPE",
+        "severity": "치명",
+        "severityCode": "CRITICAL",
+        "issueId": "PREDICTED_FULL_PIPE:link:pipeSegment_copy_1782806971818_3",
+        "primaryElement": {
+          "category": "link",
+          "id": "pipeSegment_copy_1782806971818_3"
+        },
+        "connectedElements": [],
+        "metrics": {
+          "metric": "fullness",
+          "currentValue": 0.054915443691418604,
+          "predictedValue": 1.9520649220643225,
+          "slopePerSecond": 0.0031619157972881734,
+          "minCurrentValue": 0.05,
+          "rainfallLevel": "heavy",
+          "forecastMinutes": 10
+        },
+        "priority": {
+          "priorityScore": 203.0,
+          "priorityBand": "P1",
+          "priorityReasons": [
+            "CRITICAL 위험",
+            "만관 위험",
+            "만관율 195.2%",
+            "예측 증가량 1.897",
+            "예측 상승 기울기 0.00316192/s"
+          ],
+          "source": "django"
+        },
+        "priorityScore": 203.0,
+        "priorityBand": "P1",
+        "priorityReasons": [
+          "CRITICAL 위험",
+          "만관 위험",
+          "만관율 195.2%",
+          "예측 증가량 1.897",
+          "예측 상승 기울기 0.00316192/s"
+        ]
+      },
+      {
+        "summary": "pipeSegment_copy_1782806971818_9(pipeSegment_copy_1782806971818_9)에서 만관 예측(치명) 발생",
+        "event": "만관 예측",
+        "eventCode": "PREDICTED_FULL_PIPE",
+        "severity": "치명",
+        "severityCode": "CRITICAL",
+        "issueId": "PREDICTED_FULL_PIPE:link:pipeSegment_copy_1782806971818_9",
+        "primaryElement": {
+          "category": "link",
+          "id": "pipeSegment_copy_1782806971818_9"
+        },
+        "connectedElements": [],
+        "metrics": {
+          "metric": "fullness",
+          "currentValue": 0.05418601708074528,
+          "predictedValue": 1.942825356862004,
+          "slopePerSecond": 0.0031477322329687644,
+          "minCurrentValue": 0.05,
+          "rainfallLevel": "heavy",
+          "forecastMinutes": 10
+        },
+        "priority": {
+          "priorityScore": 203.0,
+          "priorityBand": "P1",
+          "priorityReasons": [
+            "CRITICAL 위험",
+            "만관 위험",
+            "만관율 194.3%",
+            "예측 증가량 1.889",
+            "예측 상승 기울기 0.00314773/s"
+          ],
+          "source": "django"
+        },
+        "priorityScore": 203.0,
+        "priorityBand": "P1",
+        "priorityReasons": [
+          "CRITICAL 위험",
+          "만관 위험",
+          "만관율 194.3%",
+          "예측 증가량 1.889",
+          "예측 상승 기울기 0.00314773/s"
+        ]
+      },
+      {
+        "summary": "pipeSegment_copy_1782806971818_7(pipeSegment_copy_1782806971818_7)에서 만관 예측(치명) 발생",
+        "event": "만관 예측",
+        "eventCode": "PREDICTED_FULL_PIPE",
+        "severity": "치명",
+        "severityCode": "CRITICAL",
+        "issueId": "PREDICTED_FULL_PIPE:link:pipeSegment_copy_1782806971818_7",
+        "primaryElement": {
+          "category": "link",
+          "id": "pipeSegment_copy_1782806971818_7"
+        },
+        "connectedElements": [],
+        "metrics": {
+          "metric": "fullness",
+          "currentValue": 0.052212485026277254,
+          "predictedValue": 0.9931080569686821,
+          "slopePerSecond": 0.0015681592865706747,
+          "minCurrentValue": 0.05,
+          "rainfallLevel": "heavy",
+          "forecastMinutes": 10
+        },
+        "priority": {
+          "priorityScore": 200.72,
+          "priorityBand": "P1",
+          "priorityReasons": [
+            "CRITICAL 위험",
+            "만관 위험",
+            "만관율 99.3%",
+            "예측 증가량 0.941",
+            "예측 상승 기울기 0.00156816/s"
+          ],
+          "source": "django"
+        },
+        "priorityScore": 200.72,
+        "priorityBand": "P1",
+        "priorityReasons": [
+          "CRITICAL 위험",
+          "만관 위험",
+          "만관율 99.3%",
+          "예측 증가량 0.941",
+          "예측 상승 기울기 0.00156816/s"
+        ]
+      },
+      {
+        "summary": "pipeSegment_copy_1782806971818_10(pipeSegment_copy_1782806971818_10)에서 만관 예측(치명) 발생",
+        "event": "만관 예측",
+        "eventCode": "PREDICTED_FULL_PIPE",
+        "severity": "치명",
+        "severityCode": "CRITICAL",
+        "issueId": "PREDICTED_FULL_PIPE:link:pipeSegment_copy_1782806971818_10",
+        "primaryElement": {
+          "category": "link",
+          "id": "pipeSegment_copy_1782806971818_10"
+        },
+        "connectedElements": [],
+        "metrics": {
+          "metric": "fullness",
+          "currentValue": 0.05268047282551641,
+          "predictedValue": 0.9518682172063269,
+          "slopePerSecond": 0.0014986462406346842,
+          "minCurrentValue": 0.05,
+          "rainfallLevel": "heavy",
+          "forecastMinutes": 10
+        },
+        "priority": {
+          "priorityScore": 193.28,
+          "priorityBand": "P1",
+          "priorityReasons": [
+            "CRITICAL 위험",
+            "만관 위험",
+            "만관율 95.2%",
+            "예측 증가량 0.899",
+            "예측 상승 기울기 0.00149865/s"
+          ],
+          "source": "django"
+        },
+        "priorityScore": 193.28,
+        "priorityBand": "P1",
+        "priorityReasons": [
+          "CRITICAL 위험",
+          "만관 위험",
+          "만관율 95.2%",
+          "예측 증가량 0.899",
+          "예측 상승 기울기 0.00149865/s"
+        ]
+      }
+    ],
+    "priorityTargets": [
+      {
+        "rank": 1,
+        "targetId": "catchBasin_copy_1782806971818_1",
+        "targetType": "node",
+        "riskLabel": "수위 상승 예측",
+        "riskCode": "PREDICTED_NODE_DEPTH",
+        "severity": "치명",
+        "severityCode": "CRITICAL",
+        "priorityScore": 223.0,
+        "priorityBand": "P1",
+        "priorityReasons": [
+          "CRITICAL 위험",
+          "node 수위 위험",
+          "node 위험은 현장 침수 접점에 가까움",
+          "node 수위 비율 200.0%",
+          "예측 증가량 1.874",
+          "예측 상승 기울기 0.00788305/s"
+        ],
+        "prioritySource": "django",
+        "metrics": {
+          "metric": "depthRatio",
+          "currentValue": 0.1255254352786932,
+          "predictedValue": 2.0,
+          "slopePerSecond": 0.007883047324917514,
+          "minCurrentValue": 0.05,
+          "rainfallLevel": "heavy",
+          "forecastMinutes": 10
+        }
+      },
+      {
+        "rank": 2,
+        "targetId": "catchBasin_copy_1782806971818_2",
+        "targetType": "node",
+        "riskLabel": "수위 상승 예측",
+        "riskCode": "PREDICTED_NODE_DEPTH",
+        "severity": "치명",
+        "severityCode": "CRITICAL",
+        "priorityScore": 223.0,
+        "priorityBand": "P1",
+        "priorityReasons": [
+          "CRITICAL 위험",
+          "node 수위 위험",
+          "node 위험은 현장 침수 접점에 가까움",
+          "node 수위 비율 200.0%",
+          "예측 증가량 1.874",
+          "예측 상승 기울기 0.00788305/s"
+        ],
+        "prioritySource": "django",
+        "metrics": {
+          "metric": "depthRatio",
+          "currentValue": 0.12552564009248993,
+          "predictedValue": 2.0,
+          "slopePerSecond": 0.007883047324917514,
+          "minCurrentValue": 0.05,
+          "rainfallLevel": "heavy",
+          "forecastMinutes": 10
+        }
+      },
+      {
+        "rank": 3,
+        "targetId": "catchBasin_copy_1782806971818_3",
+        "targetType": "node",
+        "riskLabel": "수위 상승 예측",
+        "riskCode": "PREDICTED_NODE_DEPTH",
+        "severity": "치명",
+        "severityCode": "CRITICAL",
+        "priorityScore": 223.0,
+        "priorityBand": "P1",
+        "priorityReasons": [
+          "CRITICAL 위험",
+          "node 수위 위험",
+          "node 위험은 현장 침수 접점에 가까움",
+          "node 수위 비율 200.0%",
+          "예측 증가량 1.874",
+          "예측 상승 기울기 0.00788305/s"
+        ],
+        "prioritySource": "django",
+        "metrics": {
+          "metric": "depthRatio",
+          "currentValue": 0.12552518089705683,
+          "predictedValue": 2.0,
+          "slopePerSecond": 0.007883047324917514,
+          "minCurrentValue": 0.05,
+          "rainfallLevel": "heavy",
+          "forecastMinutes": 10
+        }
+      },
+      {
+        "rank": 4,
+        "targetId": "link_copy_1782806971818_15_CONDUIT",
+        "targetType": "link",
+        "riskLabel": "관로 용량 초과 예측",
+        "riskCode": "PREDICTED_CAPACITY_EXCEEDED",
+        "severity": "치명",
+        "severityCode": "CRITICAL",
+        "priorityScore": 210.0,
+        "priorityBand": "P1",
+        "priorityReasons": [
+          "CRITICAL 위험",
+          "용량 초과 위험",
+          "용량 비율 276.7%",
+          "예측 증가량 2.716",
+          "예측 상승 기울기 0.00452749/s"
+        ],
+        "prioritySource": "django",
+        "metrics": {
+          "metric": "capacityRatio",
+          "currentValue": 0.0509601868606134,
+          "predictedValue": 2.767456995713616,
+          "slopePerSecond": 0.004527494681421671,
+          "minCurrentValue": 0.05,
+          "rainfallLevel": "heavy",
+          "forecastMinutes": 10
+        }
+      },
+      {
+        "rank": 5,
+        "targetId": "link_copy_1782806971818_3_CONDUIT",
+        "targetType": "link",
+        "riskLabel": "관로 용량 초과 예측",
+        "riskCode": "PREDICTED_CAPACITY_EXCEEDED",
+        "severity": "치명",
+        "severityCode": "CRITICAL",
+        "priorityScore": 210.0,
+        "priorityBand": "P1",
+        "priorityReasons": [
+          "CRITICAL 위험",
+          "용량 초과 위험",
+          "용량 비율 276.7%",
+          "예측 증가량 2.716",
+          "예측 상승 기울기 0.00452749/s"
+        ],
+        "prioritySource": "django",
+        "metrics": {
+          "metric": "capacityRatio",
+          "currentValue": 0.050959080856645265,
+          "predictedValue": 2.7674558897096477,
+          "slopePerSecond": 0.004527494681421671,
+          "minCurrentValue": 0.05,
+          "rainfallLevel": "heavy",
+          "forecastMinutes": 10
+        }
+      },
+      {
+        "rank": 6,
+        "targetId": "link_copy_1782806971818_9_CONDUIT",
+        "targetType": "link",
+        "riskLabel": "관로 용량 초과 예측",
+        "riskCode": "PREDICTED_CAPACITY_EXCEEDED",
+        "severity": "치명",
+        "severityCode": "CRITICAL",
+        "priorityScore": 210.0,
+        "priorityBand": "P1",
+        "priorityReasons": [
+          "CRITICAL 위험",
+          "용량 초과 위험",
+          "용량 비율 276.7%",
+          "예측 증가량 2.716",
+          "예측 상승 기울기 0.00452749/s"
+        ],
+        "prioritySource": "django",
+        "metrics": {
+          "metric": "capacityRatio",
+          "currentValue": 0.05095803582934069,
+          "predictedValue": 2.7674548446823435,
+          "slopePerSecond": 0.004527494681421671,
+          "minCurrentValue": 0.05,
+          "rainfallLevel": "heavy",
+          "forecastMinutes": 10
+        }
+      },
+      {
+        "rank": 7,
+        "targetId": "link_copy_1782806971818_15_CONDUIT",
+        "targetType": "link",
+        "riskLabel": "만관 예측",
+        "riskCode": "PREDICTED_FULL_PIPE",
+        "severity": "치명",
+        "severityCode": "CRITICAL",
+        "priorityScore": 203.0,
+        "priorityBand": "P1",
+        "priorityReasons": [
+          "CRITICAL 위험",
+          "만관 위험",
+          "만관율 200.0%",
+          "예측 증가량 1.920",
+          "예측 상승 기울기 0.00688341/s"
+        ],
+        "prioritySource": "django",
+        "metrics": {
+          "metric": "fullness",
+          "currentValue": 0.08018355403320036,
+          "predictedValue": 2.0,
+          "slopePerSecond": 0.006883408371033253,
+          "minCurrentValue": 0.05,
+          "rainfallLevel": "heavy",
+          "forecastMinutes": 10
+        }
+      },
+      {
+        "rank": 8,
+        "targetId": "link_copy_1782806971818_3_CONDUIT",
+        "targetType": "link",
+        "riskLabel": "만관 예측",
+        "riskCode": "PREDICTED_FULL_PIPE",
+        "severity": "치명",
+        "severityCode": "CRITICAL",
+        "priorityScore": 203.0,
+        "priorityBand": "P1",
+        "priorityReasons": [
+          "CRITICAL 위험",
+          "만관 위험",
+          "만관율 200.0%",
+          "예측 증가량 1.920",
+          "예측 상승 기울기 0.00688341/s"
+        ],
+        "prioritySource": "django",
+        "metrics": {
+          "metric": "fullness",
+          "currentValue": 0.08018529275913193,
+          "predictedValue": 2.0,
+          "slopePerSecond": 0.006883408371033253,
+          "minCurrentValue": 0.05,
+          "rainfallLevel": "heavy",
+          "forecastMinutes": 10
+        }
+      },
+      {
+        "rank": 9,
+        "targetId": "link_copy_1782806971818_9_CONDUIT",
+        "targetType": "link",
+        "riskLabel": "만관 예측",
+        "riskCode": "PREDICTED_FULL_PIPE",
+        "severity": "치명",
+        "severityCode": "CRITICAL",
+        "priorityScore": 203.0,
+        "priorityBand": "P1",
+        "priorityReasons": [
+          "CRITICAL 위험",
+          "만관 위험",
+          "만관율 200.0%",
+          "예측 증가량 1.920",
+          "예측 상승 기울기 0.00688341/s"
+        ],
+        "prioritySource": "django",
+        "metrics": {
+          "metric": "fullness",
+          "currentValue": 0.0801869618767293,
+          "predictedValue": 2.0,
+          "slopePerSecond": 0.006883408371033253,
+          "minCurrentValue": 0.05,
+          "rainfallLevel": "heavy",
+          "forecastMinutes": 10
+        }
+      },
+      {
+        "rank": 10,
+        "targetId": "pipeSegment_copy_1782806971818_2",
+        "targetType": "link",
+        "riskLabel": "만관 예측",
+        "riskCode": "PREDICTED_FULL_PIPE",
+        "severity": "치명",
+        "severityCode": "CRITICAL",
+        "priorityScore": 203.0,
+        "priorityBand": "P1",
+        "priorityReasons": [
+          "CRITICAL 위험",
+          "만관 위험",
+          "만관율 200.0%",
+          "예측 증가량 1.886",
+          "예측 상승 기울기 0.00730409/s"
+        ],
+        "prioritySource": "django",
+        "metrics": {
+          "metric": "fullness",
+          "currentValue": 0.11370655038722612,
+          "predictedValue": 2.0,
+          "slopePerSecond": 0.007304085280588198,
+          "minCurrentValue": 0.05,
+          "rainfallLevel": "heavy",
+          "forecastMinutes": 10
+        }
+      },
+      {
+        "rank": 11,
+        "targetId": "pipeSegment_copy_1782806971818_3",
+        "targetType": "link",
+        "riskLabel": "만관 예측",
+        "riskCode": "PREDICTED_FULL_PIPE",
+        "severity": "치명",
+        "severityCode": "CRITICAL",
+        "priorityScore": 203.0,
+        "priorityBand": "P1",
+        "priorityReasons": [
+          "CRITICAL 위험",
+          "만관 위험",
+          "만관율 195.2%",
+          "예측 증가량 1.897",
+          "예측 상승 기울기 0.00316192/s"
+        ],
+        "prioritySource": "django",
+        "metrics": {
+          "metric": "fullness",
+          "currentValue": 0.054915443691418604,
+          "predictedValue": 1.9520649220643225,
+          "slopePerSecond": 0.0031619157972881734,
+          "minCurrentValue": 0.05,
+          "rainfallLevel": "heavy",
+          "forecastMinutes": 10
+        }
+      },
+      {
+        "rank": 12,
+        "targetId": "pipeSegment_copy_1782806971818_5",
+        "targetType": "link",
+        "riskLabel": "만관 예측",
+        "riskCode": "PREDICTED_FULL_PIPE",
+        "severity": "치명",
+        "severityCode": "CRITICAL",
+        "priorityScore": 203.0,
+        "priorityBand": "P1",
+        "priorityReasons": [
+          "CRITICAL 위험",
+          "만관 위험",
+          "만관율 200.0%",
+          "예측 증가량 1.886",
+          "예측 상승 기울기 0.00730409/s"
+        ],
+        "prioritySource": "django",
+        "metrics": {
+          "metric": "fullness",
+          "currentValue": 0.11365498702496507,
+          "predictedValue": 2.0,
+          "slopePerSecond": 0.007304085280588198,
+          "minCurrentValue": 0.05,
+          "rainfallLevel": "heavy",
+          "forecastMinutes": 10
+        }
+      },
+      {
+        "rank": 13,
+        "targetId": "pipeSegment_copy_1782806971818_6",
+        "targetType": "link",
+        "riskLabel": "만관 예측",
+        "riskCode": "PREDICTED_FULL_PIPE",
+        "severity": "치명",
+        "severityCode": "CRITICAL",
+        "priorityScore": 203.0,
+        "priorityBand": "P1",
+        "priorityReasons": [
+          "CRITICAL 위험",
+          "만관 위험",
+          "만관율 159.4%",
+          "예측 증가량 1.544",
+          "예측 상승 기울기 0.00257377/s"
+        ],
+        "prioritySource": "django",
+        "metrics": {
+          "metric": "fullness",
+          "currentValue": 0.050006325488856425,
+          "predictedValue": 1.5942670468855442,
+          "slopePerSecond": 0.0025737678689944795,
+          "minCurrentValue": 0.05,
+          "rainfallLevel": "heavy",
+          "forecastMinutes": 10
+        }
+      },
+      {
+        "rank": 14,
+        "targetId": "pipeSegment_copy_1782806971818_8",
+        "targetType": "link",
+        "riskLabel": "만관 예측",
+        "riskCode": "PREDICTED_FULL_PIPE",
+        "severity": "치명",
+        "severityCode": "CRITICAL",
+        "priorityScore": 203.0,
+        "priorityBand": "P1",
+        "priorityReasons": [
+          "CRITICAL 위험",
+          "만관 위험",
+          "만관율 200.0%",
+          "예측 증가량 1.886",
+          "예측 상승 기울기 0.00730409/s"
+        ],
+        "prioritySource": "django",
+        "metrics": {
+          "metric": "fullness",
+          "currentValue": 0.1137545388550746,
+          "predictedValue": 2.0,
+          "slopePerSecond": 0.007304085280588198,
+          "minCurrentValue": 0.05,
+          "rainfallLevel": "heavy",
+          "forecastMinutes": 10
+        }
+      },
+      {
+        "rank": 15,
+        "targetId": "pipeSegment_copy_1782806971818_9",
+        "targetType": "link",
+        "riskLabel": "만관 예측",
+        "riskCode": "PREDICTED_FULL_PIPE",
+        "severity": "치명",
+        "severityCode": "CRITICAL",
+        "priorityScore": 203.0,
+        "priorityBand": "P1",
+        "priorityReasons": [
+          "CRITICAL 위험",
+          "만관 위험",
+          "만관율 194.3%",
+          "예측 증가량 1.889",
+          "예측 상승 기울기 0.00314773/s"
+        ],
+        "prioritySource": "django",
+        "metrics": {
+          "metric": "fullness",
+          "currentValue": 0.05418601708074528,
+          "predictedValue": 1.942825356862004,
+          "slopePerSecond": 0.0031477322329687644,
+          "minCurrentValue": 0.05,
+          "rainfallLevel": "heavy",
+          "forecastMinutes": 10
+        }
+      },
+      {
+        "rank": 16,
+        "targetId": "pipeSegment_copy_1782806971818_7",
+        "targetType": "link",
+        "riskLabel": "만관 예측",
+        "riskCode": "PREDICTED_FULL_PIPE",
+        "severity": "치명",
+        "severityCode": "CRITICAL",
+        "priorityScore": 200.72,
+        "priorityBand": "P1",
+        "priorityReasons": [
+          "CRITICAL 위험",
+          "만관 위험",
+          "만관율 99.3%",
+          "예측 증가량 0.941",
+          "예측 상승 기울기 0.00156816/s"
+        ],
+        "prioritySource": "django",
+        "metrics": {
+          "metric": "fullness",
+          "currentValue": 0.052212485026277254,
+          "predictedValue": 0.9931080569686821,
+          "slopePerSecond": 0.0015681592865706747,
+          "minCurrentValue": 0.05,
+          "rainfallLevel": "heavy",
+          "forecastMinutes": 10
+        }
+      },
+      {
+        "rank": 17,
+        "targetId": "pipeSegment_copy_1782806971818_10",
+        "targetType": "link",
+        "riskLabel": "만관 예측",
+        "riskCode": "PREDICTED_FULL_PIPE",
+        "severity": "치명",
+        "severityCode": "CRITICAL",
+        "priorityScore": 193.28,
+        "priorityBand": "P1",
+        "priorityReasons": [
+          "CRITICAL 위험",
+          "만관 위험",
+          "만관율 95.2%",
+          "예측 증가량 0.899",
+          "예측 상승 기울기 0.00149865/s"
+        ],
+        "prioritySource": "django",
+        "metrics": {
+          "metric": "fullness",
+          "currentValue": 0.05268047282551641,
+          "predictedValue": 0.9518682172063269,
+          "slopePerSecond": 0.0014986462406346842,
+          "minCurrentValue": 0.05,
+          "rainfallLevel": "heavy",
+          "forecastMinutes": 10
+        }
+      },
+      {
+        "rank": 18,
+        "targetId": "pipeSegment_copy_1782806971818_1",
+        "targetType": "link",
+        "riskLabel": "막힘 폐쇄 예측",
+        "riskCode": "PREDICTED_BLOCKAGE_CLOSED",
+        "severity": "치명",
+        "severityCode": "CRITICAL",
+        "priorityScore": 185.0,
+        "priorityBand": "P1",
+        "priorityReasons": [
+          "CRITICAL 위험",
+          "막힘 위험",
+          "막힘 비율 100%"
+        ],
+        "prioritySource": "django",
+        "metrics": {
+          "metric": "blockageRatio",
+          "currentValue": 1.0,
+          "predictedValue": 1.0,
+          "slopePerSecond": 0.0,
+          "minCurrentValue": 0.8,
+          "rainfallLevel": "heavy",
+          "forecastMinutes": 10
+        }
+      }
+    ],
+    "past_history": []
+  },
+  "invokeMessages": [
+    {
+      "role": "system",
+      "content": "\n당신은 도시 침수 대응 시스템의 현장 상황 보고 담당자입니다.\n수신자는 개발자가 아니라 한국어를 사용하는 현장 팀장 또는 책임자입니다.\n\n핵심 원칙:\n- 반드시 제공된 JSON만 근거로 사용하세요.\n- JSON에 없는 정보를 추측하지 마세요.\n- 현장 인원이 이해하기 어려운 내부/개발 용어를 답변에 쓰지 마세요.\n- \"SWMM\", \"link\", \"node\", \"editorObject\", \"event\", \"primaryElement\", \"category\",\n  \"PREDICTED_FULL_PIPE\", \"PREDICTED_NODE_DEPTH\", \"PREDICTED_CAPACITY_EXCEEDED\",\n  \"CRITICAL\", \"priorityTargets\" 같은 원문 키나 코드를 그대로 출력하지 마세요.\n- 내부 코드 표현은 다음처럼 바꿔 쓰세요.\n  - link: 관로\n  - node: 맨홀/집수구/주변 지점\n  - PREDICTED_FULL_PIPE: 만관 예측\n  - PREDICTED_NODE_DEPTH: 수위 상승 예측\n  - PREDICTED_CAPACITY_EXCEEDED: 관로 용량 초과 가능성\n  - CRITICAL: 매우 위험\n- editorObject는 현장 보고에 출력하지 마세요.\n- 센서값처럼 단정하지 말고 \"감지/예측/보고된 값\"의 범위에서 표현하세요.\n\n우선순위 규칙:\n- 현장 우선순위는 반드시 JSON의 priorityTargets 순서를 따르세요.\n- priorityTargets가 있으면 그 rank, priorityBand, priorityScore, priorityReasons만 근거로 순위를 설명하세요.\n- priorityTargets가 없으면 순위를 만들지 말고 \"입력값만으로 확정 순위를 정할 수 없습니다\"라고 쓰세요.\n- 근거 없는 1순위/2순위 표현을 만들지 마세요.\n\n과거 조치 이력 규칙:\n- past_history가 비어 있으면 \"과거 조치 이력 없음\"이라고만 쓰세요.\n- past_history가 비어 있는데 \"과거에 여러 차례 조치\" 또는 \"재발\"이라고 쓰지 마세요.\n- past_history가 있을 때만 과거 조치와 재발 가능성을 언급하세요.\n\n응답은 아래 형식으로 한국어로 작성하세요.\n\n[상황 판단 요약]\n- 종합 판단: {매우 위험/주의 등}\n- 핵심 상황: {현장 용어로 한 줄}\n- 강수 상황: {주요 강수량}\n- 과거 조치 이력: {없음 또는 N건}\n- 우선 대응: {한 줄}\n\n1. 위험 판단 근거\n- 강수 근거:\n- 시설 상태 근거:\n\n2. 과거 조치 이력 반영 여부\n- 과거 조치 이력:\n- 반영한 내용:\n\n3. 가능한 원인\n\n4. 현장 확인 순서\n- priorityTargets가 있으면 그 순서대로 작성하세요.\n- priorityTargets가 없으면 확정 순위가 없다고 쓰고 우선 확인 후보만 작성하세요.\n\n5. 즉시 대응 방안\n\n6. 추가 확인 데이터\n\n7. 불확실한 부분\n"
+    },
+    {
+      "role": "human",
+      "content": "아래 JSON을 분석하세요.\n\n[현장 우선순위 - 반드시 이 순서를 따를 것]\n- 1순위: catchBasin_copy_1782806971818_1 / 수위 상승 예측 / P1 / 점수 223.0 / 근거: CRITICAL 위험, node 수위 위험, node 위험은 현장 침수 접점에 가까움, node 수위 비율 200.0%, 예측 증가량 1.874, 예측 상승 기울기 0.00788305/s\n- 2순위: catchBasin_copy_1782806971818_2 / 수위 상승 예측 / P1 / 점수 223.0 / 근거: CRITICAL 위험, node 수위 위험, node 위험은 현장 침수 접점에 가까움, node 수위 비율 200.0%, 예측 증가량 1.874, 예측 상승 기울기 0.00788305/s\n- 3순위: catchBasin_copy_1782806971818_3 / 수위 상승 예측 / P1 / 점수 223.0 / 근거: CRITICAL 위험, node 수위 위험, node 위험은 현장 침수 접점에 가까움, node 수위 비율 200.0%, 예측 증가량 1.874, 예측 상승 기울기 0.00788305/s\n- 4순위: link_copy_1782806971818_15_CONDUIT / 관로 용량 초과 예측 / P1 / 점수 210.0 / 근거: CRITICAL 위험, 용량 초과 위험, 용량 비율 276.7%, 예측 증가량 2.716, 예측 상승 기울기 0.00452749/s\n- 5순위: link_copy_1782806971818_3_CONDUIT / 관로 용량 초과 예측 / P1 / 점수 210.0 / 근거: CRITICAL 위험, 용량 초과 위험, 용량 비율 276.7%, 예측 증가량 2.716, 예측 상승 기울기 0.00452749/s\n- 6순위: link_copy_1782806971818_9_CONDUIT / 관로 용량 초과 예측 / P1 / 점수 210.0 / 근거: CRITICAL 위험, 용량 초과 위험, 용량 비율 276.7%, 예측 증가량 2.716, 예측 상승 기울기 0.00452749/s\n- 7순위: link_copy_1782806971818_15_CONDUIT / 만관 예측 / P1 / 점수 203.0 / 근거: CRITICAL 위험, 만관 위험, 만관율 200.0%, 예측 증가량 1.920, 예측 상승 기울기 0.00688341/s\n- 8순위: link_copy_1782806971818_3_CONDUIT / 만관 예측 / P1 / 점수 203.0 / 근거: CRITICAL 위험, 만관 위험, 만관율 200.0%, 예측 증가량 1.920, 예측 상승 기울기 0.00688341/s\n- 9순위: link_copy_1782806971818_9_CONDUIT / 만관 예측 / P1 / 점수 203.0 / 근거: CRITICAL 위험, 만관 위험, 만관율 200.0%, 예측 증가량 1.920, 예측 상승 기울기 0.00688341/s\n- 10순위: pipeSegment_copy_1782806971818_2 / 만관 예측 / P1 / 점수 203.0 / 근거: CRITICAL 위험, 만관 위험, 만관율 200.0%, 예측 증가량 1.886, 예측 상승 기울기 0.00730409/s\n- 11순위: pipeSegment_copy_1782806971818_3 / 만관 예측 / P1 / 점수 203.0 / 근거: CRITICAL 위험, 만관 위험, 만관율 195.2%, 예측 증가량 1.897, 예측 상승 기울기 0.00316192/s\n- 12순위: pipeSegment_copy_1782806971818_5 / 만관 예측 / P1 / 점수 203.0 / 근거: CRITICAL 위험, 만관 위험, 만관율 200.0%, 예측 증가량 1.886, 예측 상승 기울기 0.00730409/s\n- 13순위: pipeSegment_copy_1782806971818_6 / 만관 예측 / P1 / 점수 203.0 / 근거: CRITICAL 위험, 만관 위험, 만관율 159.4%, 예측 증가량 1.544, 예측 상승 기울기 0.00257377/s\n- 14순위: pipeSegment_copy_1782806971818_8 / 만관 예측 / P1 / 점수 203.0 / 근거: CRITICAL 위험, 만관 위험, 만관율 200.0%, 예측 증가량 1.886, 예측 상승 기울기 0.00730409/s\n- 15순위: pipeSegment_copy_1782806971818_9 / 만관 예측 / P1 / 점수 203.0 / 근거: CRITICAL 위험, 만관 위험, 만관율 194.3%, 예측 증가량 1.889, 예측 상승 기울기 0.00314773/s\n- 16순위: pipeSegment_copy_1782806971818_7 / 만관 예측 / P1 / 점수 200.72 / 근거: CRITICAL 위험, 만관 위험, 만관율 99.3%, 예측 증가량 0.941, 예측 상승 기울기 0.00156816/s\n- 17순위: pipeSegment_copy_1782806971818_10 / 만관 예측 / P1 / 점수 193.28 / 근거: CRITICAL 위험, 만관 위험, 만관율 95.2%, 예측 증가량 0.899, 예측 상승 기울기 0.00149865/s\n- 18순위: pipeSegment_copy_1782806971818_1 / 막힘 폐쇄 예측 / P1 / 점수 185.0 / 근거: CRITICAL 위험, 막힘 위험, 막힘 비율 100%\n\n[영향 시설 요약 - 응답 대상 항목에 반드시 사용]\n- 관로: pipeSegment_copy_1782806971818_1 (pipeSegment_copy_1782806971818_1) / 이슈 발생 지점\n- 관로: link_copy_1782806971818_15_CONDUIT (link_copy_1782806971818_15_CONDUIT) / 이슈 발생 지점\n- 관로: link_copy_1782806971818_3_CONDUIT (link_copy_1782806971818_3_CONDUIT) / 이슈 발생 지점\n- 관로: link_copy_1782806971818_9_CONDUIT (link_copy_1782806971818_9_CONDUIT) / 이슈 발생 지점\n- 관로: pipeSegment_copy_1782806971818_2 (pipeSegment_copy_1782806971818_2) / 이슈 발생 지점\n- 관로: pipeSegment_copy_1782806971818_5 (pipeSegment_copy_1782806971818_5) / 이슈 발생 지점\n- 관로: pipeSegment_copy_1782806971818_6 (pipeSegment_copy_1782806971818_6) / 이슈 발생 지점\n- 관로: pipeSegment_copy_1782806971818_8 (pipeSegment_copy_1782806971818_8) / 이슈 발생 지점\n- 관로: pipeSegment_copy_1782806971818_3 (pipeSegment_copy_1782806971818_3) / 이슈 발생 지점\n- 관로: pipeSegment_copy_1782806971818_9 (pipeSegment_copy_1782806971818_9) / 이슈 발생 지점\n- 관로: pipeSegment_copy_1782806971818_7 (pipeSegment_copy_1782806971818_7) / 이슈 발생 지점\n- 관로: pipeSegment_copy_1782806971818_10 (pipeSegment_copy_1782806971818_10) / 이슈 발생 지점\n- 맨홀/집수구/주변 지점: catchBasin_copy_1782806971818_1 (catchBasin_copy_1782806971818_1) / 이슈 발생 지점\n- 맨홀/집수구/주변 지점: catchBasin_copy_1782806971818_2 (catchBasin_copy_1782806971818_2) / 이슈 발생 지점\n- 맨홀/집수구/주변 지점: catchBasin_copy_1782806971818_3 (catchBasin_copy_1782806971818_3) / 이슈 발생 지점\n\n[과거 조치 이력]\n- 없음\n\n[분석 입력 JSON]\n{\n  \"scenarioId\": \"폭우\",\n  \"weatherObservation\": {\n    \"YYMMDDHHMI\": \"202606151500\",\n    \"STN\": \"90\",\n    \"WD1\": 270.5,\n    \"WS1\": 8.5,\n    \"WDS\": 280.0,\n    \"WSS\": 12.0,\n    \"WD10\": 265.0,\n    \"WS10\": 7.8,\n    \"TA\": 18.5,\n    \"RE\": 1.0,\n    \"RN-15m\": 25.0,\n    \"RN-60m\": 75.0,\n    \"RN-12H\": 150.0,\n    \"RN-DAY\": 200.0,\n    \"HM\": 98.0,\n    \"PA\": 1002.0,\n    \"PS\": 1005.5,\n    \"TD\": 18.0\n  },\n  \"link\": [\n    {\n      \"id\": \"pipeSegment_copy_1782806971818_1\",\n      \"role\": \"이슈 발생 지점\",\n      \"eventSummary\": \"막힘 폐쇄 예측(치명)\",\n      \"metric\": \"blockageRatio\",\n      \"currentValue\": 1.0,\n      \"predictedValue\": 1.0,\n      \"slopePerSecond\": 0.0,\n      \"minCurrentValue\": 0.8,\n      \"rainfallLevel\": \"heavy\",\n      \"forecastMinutes\": 10\n    },\n    {\n      \"id\": \"link_copy_1782806971818_15_CONDUIT\",\n      \"role\": \"이슈 발생 지점\",\n      \"eventSummary\": \"만관 예측(치명), 관로 용량 초과 예측(치명)\",\n      \"metric\": \"capacityRatio\",\n      \"currentValue\": 0.0509601868606134,\n      \"predictedValue\": 2.767456995713616,\n      \"slopePerSecond\": 0.004527494681421671,\n      \"minCurrentValue\": 0.05,\n      \"rainfallLevel\": \"heavy\",\n      \"forecastMinutes\": 10\n    },\n    {\n      \"id\": \"link_copy_1782806971818_3_CONDUIT\",\n      \"role\": \"이슈 발생 지점\",\n      \"eventSummary\": \"만관 예측(치명), 관로 용량 초과 예측(치명)\",\n      \"metric\": \"capacityRatio\",\n      \"currentValue\": 0.050959080856645265,\n      \"predictedValue\": 2.7674558897096477,\n      \"slopePerSecond\": 0.004527494681421671,\n      \"minCurrentValue\": 0.05,\n      \"rainfallLevel\": \"heavy\",\n      \"forecastMinutes\": 10\n    },\n    {\n      \"id\": \"link_copy_1782806971818_9_CONDUIT\",\n      \"role\": \"이슈 발생 지점\",\n      \"eventSummary\": \"만관 예측(치명), 관로 용량 초과 예측(치명)\",\n      \"metric\": \"capacityRatio\",\n      \"currentValue\": 0.05095803582934069,\n      \"predictedValue\": 2.7674548446823435,\n      \"slopePerSecond\": 0.004527494681421671,\n      \"minCurrentValue\": 0.05,\n      \"rainfallLevel\": \"heavy\",\n      \"forecastMinutes\": 10\n    },\n    {\n      \"id\": \"pipeSegment_copy_1782806971818_2\",\n      \"role\": \"이슈 발생 지점\",\n      \"eventSummary\": \"만관 예측(치명)\",\n      \"metric\": \"fullness\",\n      \"currentValue\": 0.11370655038722612,\n      \"predictedValue\": 2.0,\n      \"slopePerSecond\": 0.007304085280588198,\n      \"minCurrentValue\": 0.05,\n      \"rainfallLevel\": \"heavy\",\n      \"forecastMinutes\": 10\n    },\n    {\n      \"id\": \"pipeSegment_copy_1782806971818_5\",\n      \"role\": \"이슈 발생 지점\",\n      \"eventSummary\": \"만관 예측(치명)\",\n      \"metric\": \"fullness\",\n      \"currentValue\": 0.11365498702496507,\n      \"predictedValue\": 2.0,\n      \"slopePerSecond\": 0.007304085280588198,\n      \"minCurrentValue\": 0.05,\n      \"rainfallLevel\": \"heavy\",\n      \"forecastMinutes\": 10\n    },\n    {\n      \"id\": \"pipeSegment_copy_1782806971818_6\",\n      \"role\": \"이슈 발생 지점\",\n      \"eventSummary\": \"만관 예측(치명)\",\n      \"metric\": \"fullness\",\n      \"currentValue\": 0.050006325488856425,\n      \"predictedValue\": 1.5942670468855442,\n      \"slopePerSecond\": 0.0025737678689944795,\n      \"minCurrentValue\": 0.05,\n      \"rainfallLevel\": \"heavy\",\n      \"forecastMinutes\": 10\n    },\n    {\n      \"id\": \"pipeSegment_copy_1782806971818_8\",\n      \"role\": \"이슈 발생 지점\",\n      \"eventSummary\": \"만관 예측(치명)\",\n      \"metric\": \"fullness\",\n      \"currentValue\": 0.1137545388550746,\n      \"predictedValue\": 2.0,\n      \"slopePerSecond\": 0.007304085280588198,\n      \"minCurrentValue\": 0.05,\n      \"rainfallLevel\": \"heavy\",\n      \"forecastMinutes\": 10\n    },\n    {\n      \"id\": \"pipeSegment_copy_1782806971818_3\",\n      \"role\": \"이슈 발생 지점\",\n      \"eventSummary\": \"만관 예측(치명)\",\n      \"metric\": \"fullness\",\n      \"currentValue\": 0.054915443691418604,\n      \"predictedValue\": 1.9520649220643225,\n      \"slopePerSecond\": 0.0031619157972881734,\n      \"minCurrentValue\": 0.05,\n      \"rainfallLevel\": \"heavy\",\n      \"forecastMinutes\": 10\n    },\n    {\n      \"id\": \"pipeSegment_copy_1782806971818_9\",\n      \"role\": \"이슈 발생 지점\",\n      \"eventSummary\": \"만관 예측(치명)\",\n      \"metric\": \"fullness\",\n      \"currentValue\": 0.05418601708074528,\n      \"predictedValue\": 1.942825356862004,\n      \"slopePerSecond\": 0.0031477322329687644,\n      \"minCurrentValue\": 0.05,\n      \"rainfallLevel\": \"heavy\",\n      \"forecastMinutes\": 10\n    },\n    {\n      \"id\": \"pipeSegment_copy_1782806971818_7\",\n      \"role\": \"이슈 발생 지점\",\n      \"eventSummary\": \"만관 예측(치명)\",\n      \"metric\": \"fullness\",\n      \"currentValue\": 0.052212485026277254,\n      \"predictedValue\": 0.9931080569686821,\n      \"slopePerSecond\": 0.0015681592865706747,\n      \"minCurrentValue\": 0.05,\n      \"rainfallLevel\": \"heavy\",\n      \"forecastMinutes\": 10\n    },\n    {\n      \"id\": \"pipeSegment_copy_1782806971818_10\",\n      \"role\": \"이슈 발생 지점\",\n      \"eventSummary\": \"만관 예측(치명)\",\n      \"metric\": \"fullness\",\n      \"currentValue\": 0.05268047282551641,\n      \"predictedValue\": 0.9518682172063269,\n      \"slopePerSecond\": 0.0014986462406346842,\n      \"minCurrentValue\": 0.05,\n      \"rainfallLevel\": \"heavy\",\n      \"forecastMinutes\": 10\n    }\n  ],\n  \"node\": [\n    {\n      \"id\": \"catchBasin_copy_1782806971818_1\",\n      \"role\": \"이슈 발생 지점\",\n      \"eventSummary\": \"수위 상승 예측(치명)\",\n      \"metric\": \"depthRatio\",\n      \"currentValue\": 0.1255254352786932,\n      \"predictedValue\": 2.0,\n      \"slopePerSecond\": 0.007883047324917514,\n      \"minCurrentValue\": 0.05,\n      \"rainfallLevel\": \"heavy\",\n      \"forecastMinutes\": 10\n    },\n    {\n      \"id\": \"catchBasin_copy_1782806971818_2\",\n      \"role\": \"이슈 발생 지점\",\n      \"eventSummary\": \"수위 상승 예측(치명)\",\n      \"metric\": \"depthRatio\",\n      \"currentValue\": 0.12552564009248993,\n      \"predictedValue\": 2.0,\n      \"slopePerSecond\": 0.007883047324917514,\n      \"minCurrentValue\": 0.05,\n      \"rainfallLevel\": \"heavy\",\n      \"forecastMinutes\": 10\n    },\n    {\n      \"id\": \"catchBasin_copy_1782806971818_3\",\n      \"role\": \"이슈 발생 지점\",\n      \"eventSummary\": \"수위 상승 예측(치명)\",\n      \"metric\": \"depthRatio\",\n      \"currentValue\": 0.12552518089705683,\n      \"predictedValue\": 2.0,\n      \"slopePerSecond\": 0.007883047324917514,\n      \"minCurrentValue\": 0.05,\n      \"rainfallLevel\": \"heavy\",\n      \"forecastMinutes\": 10\n    }\n  ],\n  \"editorObject\": [],\n  \"swmmSimulation\": {\n    \"runId\": \"20260630-193958-f1219e77\",\n    \"stepIndex\": 0,\n    \"forecastMinutes\": 10,\n    \"windowSeconds\": 0,\n    \"control\": {\n      \"rainfallRatio\": 5.0,\n      \"rainfallPercent\": 500.0,\n      \"blockagesById\": {\n        \"pipeSegment_copy_1782806971818_1\": 1.0\n      },\n      \"maxRainfallMmPerHour\": 100.0,\n      \"speedMultiplier\": 1.0\n    },\n    \"highestSeverity\": \"치명\",\n    \"highestSeverityCode\": \"CRITICAL\",\n    \"contextLevel\": \"forecast\",\n    \"schemaVersion\": 1,\n    \"systemMeta\": {\n      \"sourceService\": \"SuperMario_Django\",\n      \"targetService\": \"SuperMario_LLM\",\n      \"dispatchStatus\": \"not_called\",\n      \"triggerBasis\": \"forecast\"\n    }\n  },\n  \"swmmIssues\": [\n    {\n      \"summary\": \"pipeSegment_copy_1782806971818_1(pipeSegment_copy_1782806971818_1)에서 막힘 폐쇄 예측(치명) 발생\",\n      \"event\": \"막힘 폐쇄 예측\",\n      \"eventCode\": \"PREDICTED_BLOCKAGE_CLOSED\",\n      \"severity\": \"치명\",\n      \"severityCode\": \"CRITICAL\",\n      \"issueId\": \"PREDICTED_BLOCKAGE_CLOSED:link:pipeSegment_copy_1782806971818_1\",\n      \"primaryElement\": {\n        \"category\": \"link\",\n        \"id\": \"pipeSegment_copy_1782806971818_1\"\n      },\n      \"connectedElements\": [],\n      \"metrics\": {\n        \"metric\": \"blockageRatio\",\n        \"currentValue\": 1.0,\n        \"predictedValue\": 1.0,\n        \"slopePerSecond\": 0.0,\n        \"minCurrentValue\": 0.8,\n        \"rainfallLevel\": \"heavy\",\n        \"forecastMinutes\": 10\n      },\n      \"priority\": {\n        \"priorityScore\": 185.0,\n        \"priorityBand\": \"P1\",\n        \"priorityReasons\": [\n          \"CRITICAL 위험\",\n          \"막힘 위험\",\n          \"막힘 비율 100%\"\n        ],\n        \"source\": \"django\"\n      },\n      \"priorityScore\": 185.0,\n      \"priorityBand\": \"P1\",\n      \"priorityReasons\": [\n        \"CRITICAL 위험\",\n        \"막힘 위험\",\n        \"막힘 비율 100%\"\n      ]\n    },\n    {\n      \"summary\": \"catchBasin_copy_1782806971818_1(catchBasin_copy_1782806971818_1)에서 수위 상승 예측(치명) 발생\",\n      \"event\": \"수위 상승 예측\",\n      \"eventCode\": \"PREDICTED_NODE_DEPTH\",\n      \"severity\": \"치명\",\n      \"severityCode\": \"CRITICAL\",\n      \"issueId\": \"PREDICTED_NODE_DEPTH:node:catchBasin_copy_1782806971818_1\",\n      \"primaryElement\": {\n        \"category\": \"node\",\n        \"id\": \"catchBasin_copy_1782806971818_1\"\n      },\n      \"connectedElements\": [],\n      \"metrics\": {\n        \"metric\": \"depthRatio\",\n        \"currentValue\": 0.1255254352786932,\n        \"predictedValue\": 2.0,\n        \"slopePerSecond\": 0.007883047324917514,\n        \"minCurrentValue\": 0.05,\n        \"rainfallLevel\": \"heavy\",\n        \"forecastMinutes\": 10\n      },\n      \"priority\": {\n        \"priorityScore\": 223.0,\n        \"priorityBand\": \"P1\",\n        \"priorityReasons\": [\n          \"CRITICAL 위험\",\n          \"node 수위 위험\",\n          \"node 위험은 현장 침수 접점에 가까움\",\n          \"node 수위 비율 200.0%\",\n          \"예측 증가량 1.874\",\n          \"예측 상승 기울기 0.00788305/s\"\n        ],\n        \"source\": \"django\"\n      },\n      \"priorityScore\": 223.0,\n      \"priorityBand\": \"P1\",\n      \"priorityReasons\": [\n        \"CRITICAL 위험\",\n        \"node 수위 위험\",\n        \"node 위험은 현장 침수 접점에 가까움\",\n        \"node 수위 비율 200.0%\",\n        \"예측 증가량 1.874\",\n        \"예측 상승 기울기 0.00788305/s\"\n      ]\n    },\n    {\n      \"summary\": \"catchBasin_copy_1782806971818_2(catchBasin_copy_1782806971818_2)에서 수위 상승 예측(치명) 발생\",\n      \"event\": \"수위 상승 예측\",\n      \"eventCode\": \"PREDICTED_NODE_DEPTH\",\n      \"severity\": \"치명\",\n      \"severityCode\": \"CRITICAL\",\n      \"issueId\": \"PREDICTED_NODE_DEPTH:node:catchBasin_copy_1782806971818_2\",\n      \"primaryElement\": {\n        \"category\": \"node\",\n        \"id\": \"catchBasin_copy_1782806971818_2\"\n      },\n      \"connectedElements\": [],\n      \"metrics\": {\n        \"metric\": \"depthRatio\",\n        \"currentValue\": 0.12552564009248993,\n        \"predictedValue\": 2.0,\n        \"slopePerSecond\": 0.007883047324917514,\n        \"minCurrentValue\": 0.05,\n        \"rainfallLevel\": \"heavy\",\n        \"forecastMinutes\": 10\n      },\n      \"priority\": {\n        \"priorityScore\": 223.0,\n        \"priorityBand\": \"P1\",\n        \"priorityReasons\": [\n          \"CRITICAL 위험\",\n          \"node 수위 위험\",\n          \"node 위험은 현장 침수 접점에 가까움\",\n          \"node 수위 비율 200.0%\",\n          \"예측 증가량 1.874\",\n          \"예측 상승 기울기 0.00788305/s\"\n        ],\n        \"source\": \"django\"\n      },\n      \"priorityScore\": 223.0,\n      \"priorityBand\": \"P1\",\n      \"priorityReasons\": [\n        \"CRITICAL 위험\",\n        \"node 수위 위험\",\n        \"node 위험은 현장 침수 접점에 가까움\",\n        \"node 수위 비율 200.0%\",\n        \"예측 증가량 1.874\",\n        \"예측 상승 기울기 0.00788305/s\"\n      ]\n    },\n    {\n      \"summary\": \"catchBasin_copy_1782806971818_3(catchBasin_copy_1782806971818_3)에서 수위 상승 예측(치명) 발생\",\n      \"event\": \"수위 상승 예측\",\n      \"eventCode\": \"PREDICTED_NODE_DEPTH\",\n      \"severity\": \"치명\",\n      \"severityCode\": \"CRITICAL\",\n      \"issueId\": \"PREDICTED_NODE_DEPTH:node:catchBasin_copy_1782806971818_3\",\n      \"primaryElement\": {\n        \"category\": \"node\",\n        \"id\": \"catchBasin_copy_1782806971818_3\"\n      },\n      \"connectedElements\": [],\n      \"metrics\": {\n        \"metric\": \"depthRatio\",\n        \"currentValue\": 0.12552518089705683,\n        \"predictedValue\": 2.0,\n        \"slopePerSecond\": 0.007883047324917514,\n        \"minCurrentValue\": 0.05,\n        \"rainfallLevel\": \"heavy\",\n        \"forecastMinutes\": 10\n      },\n      \"priority\": {\n        \"priorityScore\": 223.0,\n        \"priorityBand\": \"P1\",\n        \"priorityReasons\": [\n          \"CRITICAL 위험\",\n          \"node 수위 위험\",\n          \"node 위험은 현장 침수 접점에 가까움\",\n          \"node 수위 비율 200.0%\",\n          \"예측 증가량 1.874\",\n          \"예측 상승 기울기 0.00788305/s\"\n        ],\n        \"source\": \"django\"\n      },\n      \"priorityScore\": 223.0,\n      \"priorityBand\": \"P1\",\n      \"priorityReasons\": [\n        \"CRITICAL 위험\",\n        \"node 수위 위험\",\n        \"node 위험은 현장 침수 접점에 가까움\",\n        \"node 수위 비율 200.0%\",\n        \"예측 증가량 1.874\",\n        \"예측 상승 기울기 0.00788305/s\"\n      ]\n    },\n    {\n      \"summary\": \"link_copy_1782806971818_15_CONDUIT(link_copy_1782806971818_15_CONDUIT)에서 만관 예측(치명) 발생\",\n      \"event\": \"만관 예측\",\n      \"eventCode\": \"PREDICTED_FULL_PIPE\",\n      \"severity\": \"치명\",\n      \"severityCode\": \"CRITICAL\",\n      \"issueId\": \"PREDICTED_FULL_PIPE:link:link_copy_1782806971818_15_CONDUIT\",\n      \"primaryElement\": {\n        \"category\": \"link\",\n        \"id\": \"link_copy_1782806971818_15_CONDUIT\"\n      },\n      \"connectedElements\": [],\n      \"metrics\": {\n        \"metric\": \"fullness\",\n        \"currentValue\": 0.08018355403320036,\n        \"predictedValue\": 2.0,\n        \"slopePerSecond\": 0.006883408371033253,\n        \"minCurrentValue\": 0.05,\n        \"rainfallLevel\": \"heavy\",\n        \"forecastMinutes\": 10\n      },\n      \"priority\": {\n        \"priorityScore\": 203.0,\n        \"priorityBand\": \"P1\",\n        \"priorityReasons\": [\n          \"CRITICAL 위험\",\n          \"만관 위험\",\n          \"만관율 200.0%\",\n          \"예측 증가량 1.920\",\n          \"예측 상승 기울기 0.00688341/s\"\n        ],\n        \"source\": \"django\"\n      },\n      \"priorityScore\": 203.0,\n      \"priorityBand\": \"P1\",\n      \"priorityReasons\": [\n        \"CRITICAL 위험\",\n        \"만관 위험\",\n        \"만관율 200.0%\",\n        \"예측 증가량 1.920\",\n        \"예측 상승 기울기 0.00688341/s\"\n      ]\n    },\n    {\n      \"summary\": \"link_copy_1782806971818_3_CONDUIT(link_copy_1782806971818_3_CONDUIT)에서 만관 예측(치명) 발생\",\n      \"event\": \"만관 예측\",\n      \"eventCode\": \"PREDICTED_FULL_PIPE\",\n      \"severity\": \"치명\",\n      \"severityCode\": \"CRITICAL\",\n      \"issueId\": \"PREDICTED_FULL_PIPE:link:link_copy_1782806971818_3_CONDUIT\",\n      \"primaryElement\": {\n        \"category\": \"link\",\n        \"id\": \"link_copy_1782806971818_3_CONDUIT\"\n      },\n      \"connectedElements\": [],\n      \"metrics\": {\n        \"metric\": \"fullness\",\n        \"currentValue\": 0.08018529275913193,\n        \"predictedValue\": 2.0,\n        \"slopePerSecond\": 0.006883408371033253,\n        \"minCurrentValue\": 0.05,\n        \"rainfallLevel\": \"heavy\",\n        \"forecastMinutes\": 10\n      },\n      \"priority\": {\n        \"priorityScore\": 203.0,\n        \"priorityBand\": \"P1\",\n        \"priorityReasons\": [\n          \"CRITICAL 위험\",\n          \"만관 위험\",\n          \"만관율 200.0%\",\n          \"예측 증가량 1.920\",\n          \"예측 상승 기울기 0.00688341/s\"\n        ],\n        \"source\": \"django\"\n      },\n      \"priorityScore\": 203.0,\n      \"priorityBand\": \"P1\",\n      \"priorityReasons\": [\n        \"CRITICAL 위험\",\n        \"만관 위험\",\n        \"만관율 200.0%\",\n        \"예측 증가량 1.920\",\n        \"예측 상승 기울기 0.00688341/s\"\n      ]\n    },\n    {\n      \"summary\": \"link_copy_1782806971818_9_CONDUIT(link_copy_1782806971818_9_CONDUIT)에서 만관 예측(치명) 발생\",\n      \"event\": \"만관 예측\",\n      \"eventCode\": \"PREDICTED_FULL_PIPE\",\n      \"severity\": \"치명\",\n      \"severityCode\": \"CRITICAL\",\n      \"issueId\": \"PREDICTED_FULL_PIPE:link:link_copy_1782806971818_9_CONDUIT\",\n      \"primaryElement\": {\n        \"category\": \"link\",\n        \"id\": \"link_copy_1782806971818_9_CONDUIT\"\n      },\n      \"connectedElements\": [],\n      \"metrics\": {\n        \"metric\": \"fullness\",\n        \"currentValue\": 0.0801869618767293,\n        \"predictedValue\": 2.0,\n        \"slopePerSecond\": 0.006883408371033253,\n        \"minCurrentValue\": 0.05,\n        \"rainfallLevel\": \"heavy\",\n        \"forecastMinutes\": 10\n      },\n      \"priority\": {\n        \"priorityScore\": 203.0,\n        \"priorityBand\": \"P1\",\n        \"priorityReasons\": [\n          \"CRITICAL 위험\",\n          \"만관 위험\",\n          \"만관율 200.0%\",\n          \"예측 증가량 1.920\",\n          \"예측 상승 기울기 0.00688341/s\"\n        ],\n        \"source\": \"django\"\n      },\n      \"priorityScore\": 203.0,\n      \"priorityBand\": \"P1\",\n      \"priorityReasons\": [\n        \"CRITICAL 위험\",\n        \"만관 위험\",\n        \"만관율 200.0%\",\n        \"예측 증가량 1.920\",\n        \"예측 상승 기울기 0.00688341/s\"\n      ]\n    },\n    {\n      \"summary\": \"pipeSegment_copy_1782806971818_2(pipeSegment_copy_1782806971818_2)에서 만관 예측(치명) 발생\",\n      \"event\": \"만관 예측\",\n      \"eventCode\": \"PREDICTED_FULL_PIPE\",\n      \"severity\": \"치명\",\n      \"severityCode\": \"CRITICAL\",\n      \"issueId\": \"PREDICTED_FULL_PIPE:link:pipeSegment_copy_1782806971818_2\",\n      \"primaryElement\": {\n        \"category\": \"link\",\n        \"id\": \"pipeSegment_copy_1782806971818_2\"\n      },\n      \"connectedElements\": [],\n      \"metrics\": {\n        \"metric\": \"fullness\",\n        \"currentValue\": 0.11370655038722612,\n        \"predictedValue\": 2.0,\n        \"slopePerSecond\": 0.007304085280588198,\n        \"minCurrentValue\": 0.05,\n        \"rainfallLevel\": \"heavy\",\n        \"forecastMinutes\": 10\n      },\n      \"priority\": {\n        \"priorityScore\": 203.0,\n        \"priorityBand\": \"P1\",\n        \"priorityReasons\": [\n          \"CRITICAL 위험\",\n          \"만관 위험\",\n          \"만관율 200.0%\",\n          \"예측 증가량 1.886\",\n          \"예측 상승 기울기 0.00730409/s\"\n        ],\n        \"source\": \"django\"\n      },\n      \"priorityScore\": 203.0,\n      \"priorityBand\": \"P1\",\n      \"priorityReasons\": [\n        \"CRITICAL 위험\",\n        \"만관 위험\",\n        \"만관율 200.0%\",\n        \"예측 증가량 1.886\",\n        \"예측 상승 기울기 0.00730409/s\"\n      ]\n    },\n    {\n      \"summary\": \"pipeSegment_copy_1782806971818_5(pipeSegment_copy_1782806971818_5)에서 만관 예측(치명) 발생\",\n      \"event\": \"만관 예측\",\n      \"eventCode\": \"PREDICTED_FULL_PIPE\",\n      \"severity\": \"치명\",\n      \"severityCode\": \"CRITICAL\",\n      \"issueId\": \"PREDICTED_FULL_PIPE:link:pipeSegment_copy_1782806971818_5\",\n      \"primaryElement\": {\n        \"category\": \"link\",\n        \"id\": \"pipeSegment_copy_1782806971818_5\"\n      },\n      \"connectedElements\": [],\n      \"metrics\": {\n        \"metric\": \"fullness\",\n        \"currentValue\": 0.11365498702496507,\n        \"predictedValue\": 2.0,\n        \"slopePerSecond\": 0.007304085280588198,\n        \"minCurrentValue\": 0.05,\n        \"rainfallLevel\": \"heavy\",\n        \"forecastMinutes\": 10\n      },\n      \"priority\": {\n        \"priorityScore\": 203.0,\n        \"priorityBand\": \"P1\",\n        \"priorityReasons\": [\n          \"CRITICAL 위험\",\n          \"만관 위험\",\n          \"만관율 200.0%\",\n          \"예측 증가량 1.886\",\n          \"예측 상승 기울기 0.00730409/s\"\n        ],\n        \"source\": \"django\"\n      },\n      \"priorityScore\": 203.0,\n      \"priorityBand\": \"P1\",\n      \"priorityReasons\": [\n        \"CRITICAL 위험\",\n        \"만관 위험\",\n        \"만관율 200.0%\",\n        \"예측 증가량 1.886\",\n        \"예측 상승 기울기 0.00730409/s\"\n      ]\n    },\n    {\n      \"summary\": \"pipeSegment_copy_1782806971818_6(pipeSegment_copy_1782806971818_6)에서 만관 예측(치명) 발생\",\n      \"event\": \"만관 예측\",\n      \"eventCode\": \"PREDICTED_FULL_PIPE\",\n      \"severity\": \"치명\",\n      \"severityCode\": \"CRITICAL\",\n      \"issueId\": \"PREDICTED_FULL_PIPE:link:pipeSegment_copy_1782806971818_6\",\n      \"primaryElement\": {\n        \"category\": \"link\",\n        \"id\": \"pipeSegment_copy_1782806971818_6\"\n      },\n      \"connectedElements\": [],\n      \"metrics\": {\n        \"metric\": \"fullness\",\n        \"currentValue\": 0.050006325488856425,\n        \"predictedValue\": 1.5942670468855442,\n        \"slopePerSecond\": 0.0025737678689944795,\n        \"minCurrentValue\": 0.05,\n        \"rainfallLevel\": \"heavy\",\n        \"forecastMinutes\": 10\n      },\n      \"priority\": {\n        \"priorityScore\": 203.0,\n        \"priorityBand\": \"P1\",\n        \"priorityReasons\": [\n          \"CRITICAL 위험\",\n          \"만관 위험\",\n          \"만관율 159.4%\",\n          \"예측 증가량 1.544\",\n          \"예측 상승 기울기 0.00257377/s\"\n        ],\n        \"source\": \"django\"\n      },\n      \"priorityScore\": 203.0,\n      \"priorityBand\": \"P1\",\n      \"priorityReasons\": [\n        \"CRITICAL 위험\",\n        \"만관 위험\",\n        \"만관율 159.4%\",\n        \"예측 증가량 1.544\",\n        \"예측 상승 기울기 0.00257377/s\"\n      ]\n    },\n    {\n      \"summary\": \"pipeSegment_copy_1782806971818_8(pipeSegment_copy_1782806971818_8)에서 만관 예측(치명) 발생\",\n      \"event\": \"만관 예측\",\n      \"eventCode\": \"PREDICTED_FULL_PIPE\",\n      \"severity\": \"치명\",\n      \"severityCode\": \"CRITICAL\",\n      \"issueId\": \"PREDICTED_FULL_PIPE:link:pipeSegment_copy_1782806971818_8\",\n      \"primaryElement\": {\n        \"category\": \"link\",\n        \"id\": \"pipeSegment_copy_1782806971818_8\"\n      },\n      \"connectedElements\": [],\n      \"metrics\": {\n        \"metric\": \"fullness\",\n        \"currentValue\": 0.1137545388550746,\n        \"predictedValue\": 2.0,\n        \"slopePerSecond\": 0.007304085280588198,\n        \"minCurrentValue\": 0.05,\n        \"rainfallLevel\": \"heavy\",\n        \"forecastMinutes\": 10\n      },\n      \"priority\": {\n        \"priorityScore\": 203.0,\n        \"priorityBand\": \"P1\",\n        \"priorityReasons\": [\n          \"CRITICAL 위험\",\n          \"만관 위험\",\n          \"만관율 200.0%\",\n          \"예측 증가량 1.886\",\n          \"예측 상승 기울기 0.00730409/s\"\n        ],\n        \"source\": \"django\"\n      },\n      \"priorityScore\": 203.0,\n      \"priorityBand\": \"P1\",\n      \"priorityReasons\": [\n        \"CRITICAL 위험\",\n        \"만관 위험\",\n        \"만관율 200.0%\",\n        \"예측 증가량 1.886\",\n        \"예측 상승 기울기 0.00730409/s\"\n      ]\n    },\n    {\n      \"summary\": \"link_copy_1782806971818_15_CONDUIT(link_copy_1782806971818_15_CONDUIT)에서 관로 용량 초과 예측(치명) 발생\",\n      \"event\": \"관로 용량 초과 예측\",\n      \"eventCode\": \"PREDICTED_CAPACITY_EXCEEDED\",\n      \"severity\": \"치명\",\n      \"severityCode\": \"CRITICAL\",\n      \"issueId\": \"PREDICTED_CAPACITY_EXCEEDED:link:link_copy_1782806971818_15_CONDUIT\",\n      \"primaryElement\": {\n        \"category\": \"link\",\n        \"id\": \"link_copy_1782806971818_15_CONDUIT\"\n      },\n      \"connectedElements\": [],\n      \"metrics\": {\n        \"metric\": \"capacityRatio\",\n        \"currentValue\": 0.0509601868606134,\n        \"predictedValue\": 2.767456995713616,\n        \"slopePerSecond\": 0.004527494681421671,\n        \"minCurrentValue\": 0.05,\n        \"rainfallLevel\": \"heavy\",\n        \"forecastMinutes\": 10\n      },\n      \"priority\": {\n        \"priorityScore\": 210.0,\n        \"priorityBand\": \"P1\",\n        \"priorityReasons\": [\n          \"CRITICAL 위험\",\n          \"용량 초과 위험\",\n          \"용량 비율 276.7%\",\n          \"예측 증가량 2.716\",\n          \"예측 상승 기울기 0.00452749/s\"\n        ],\n        \"source\": \"django\"\n      },\n      \"priorityScore\": 210.0,\n      \"priorityBand\": \"P1\",\n      \"priorityReasons\": [\n        \"CRITICAL 위험\",\n        \"용량 초과 위험\",\n        \"용량 비율 276.7%\",\n        \"예측 증가량 2.716\",\n        \"예측 상승 기울기 0.00452749/s\"\n      ]\n    },\n    {\n      \"summary\": \"link_copy_1782806971818_3_CONDUIT(link_copy_1782806971818_3_CONDUIT)에서 관로 용량 초과 예측(치명) 발생\",\n      \"event\": \"관로 용량 초과 예측\",\n      \"eventCode\": \"PREDICTED_CAPACITY_EXCEEDED\",\n      \"severity\": \"치명\",\n      \"severityCode\": \"CRITICAL\",\n      \"issueId\": \"PREDICTED_CAPACITY_EXCEEDED:link:link_copy_1782806971818_3_CONDUIT\",\n      \"primaryElement\": {\n        \"category\": \"link\",\n        \"id\": \"link_copy_1782806971818_3_CONDUIT\"\n      },\n      \"connectedElements\": [],\n      \"metrics\": {\n        \"metric\": \"capacityRatio\",\n        \"currentValue\": 0.050959080856645265,\n        \"predictedValue\": 2.7674558897096477,\n        \"slopePerSecond\": 0.004527494681421671,\n        \"minCurrentValue\": 0.05,\n        \"rainfallLevel\": \"heavy\",\n        \"forecastMinutes\": 10\n      },\n      \"priority\": {\n        \"priorityScore\": 210.0,\n        \"priorityBand\": \"P1\",\n        \"priorityReasons\": [\n          \"CRITICAL 위험\",\n          \"용량 초과 위험\",\n          \"용량 비율 276.7%\",\n          \"예측 증가량 2.716\",\n          \"예측 상승 기울기 0.00452749/s\"\n        ],\n        \"source\": \"django\"\n      },\n      \"priorityScore\": 210.0,\n      \"priorityBand\": \"P1\",\n      \"priorityReasons\": [\n        \"CRITICAL 위험\",\n        \"용량 초과 위험\",\n        \"용량 비율 276.7%\",\n        \"예측 증가량 2.716\",\n        \"예측 상승 기울기 0.00452749/s\"\n      ]\n    },\n    {\n      \"summary\": \"link_copy_1782806971818_9_CONDUIT(link_copy_1782806971818_9_CONDUIT)에서 관로 용량 초과 예측(치명) 발생\",\n      \"event\": \"관로 용량 초과 예측\",\n      \"eventCode\": \"PREDICTED_CAPACITY_EXCEEDED\",\n      \"severity\": \"치명\",\n      \"severityCode\": \"CRITICAL\",\n      \"issueId\": \"PREDICTED_CAPACITY_EXCEEDED:link:link_copy_1782806971818_9_CONDUIT\",\n      \"primaryElement\": {\n        \"category\": \"link\",\n        \"id\": \"link_copy_1782806971818_9_CONDUIT\"\n      },\n      \"connectedElements\": [],\n      \"metrics\": {\n        \"metric\": \"capacityRatio\",\n        \"currentValue\": 0.05095803582934069,\n        \"predictedValue\": 2.7674548446823435,\n        \"slopePerSecond\": 0.004527494681421671,\n        \"minCurrentValue\": 0.05,\n        \"rainfallLevel\": \"heavy\",\n        \"forecastMinutes\": 10\n      },\n      \"priority\": {\n        \"priorityScore\": 210.0,\n        \"priorityBand\": \"P1\",\n        \"priorityReasons\": [\n          \"CRITICAL 위험\",\n          \"용량 초과 위험\",\n          \"용량 비율 276.7%\",\n          \"예측 증가량 2.716\",\n          \"예측 상승 기울기 0.00452749/s\"\n        ],\n        \"source\": \"django\"\n      },\n      \"priorityScore\": 210.0,\n      \"priorityBand\": \"P1\",\n      \"priorityReasons\": [\n        \"CRITICAL 위험\",\n        \"용량 초과 위험\",\n        \"용량 비율 276.7%\",\n        \"예측 증가량 2.716\",\n        \"예측 상승 기울기 0.00452749/s\"\n      ]\n    },\n    {\n      \"summary\": \"pipeSegment_copy_1782806971818_3(pipeSegment_copy_1782806971818_3)에서 만관 예측(치명) 발생\",\n      \"event\": \"만관 예측\",\n      \"eventCode\": \"PREDICTED_FULL_PIPE\",\n      \"severity\": \"치명\",\n      \"severityCode\": \"CRITICAL\",\n      \"issueId\": \"PREDICTED_FULL_PIPE:link:pipeSegment_copy_1782806971818_3\",\n      \"primaryElement\": {\n        \"category\": \"link\",\n        \"id\": \"pipeSegment_copy_1782806971818_3\"\n      },\n      \"connectedElements\": [],\n      \"metrics\": {\n        \"metric\": \"fullness\",\n        \"currentValue\": 0.054915443691418604,\n        \"predictedValue\": 1.9520649220643225,\n        \"slopePerSecond\": 0.0031619157972881734,\n        \"minCurrentValue\": 0.05,\n        \"rainfallLevel\": \"heavy\",\n        \"forecastMinutes\": 10\n      },\n      \"priority\": {\n        \"priorityScore\": 203.0,\n        \"priorityBand\": \"P1\",\n        \"priorityReasons\": [\n          \"CRITICAL 위험\",\n          \"만관 위험\",\n          \"만관율 195.2%\",\n          \"예측 증가량 1.897\",\n          \"예측 상승 기울기 0.00316192/s\"\n        ],\n        \"source\": \"django\"\n      },\n      \"priorityScore\": 203.0,\n      \"priorityBand\": \"P1\",\n      \"priorityReasons\": [\n        \"CRITICAL 위험\",\n        \"만관 위험\",\n        \"만관율 195.2%\",\n        \"예측 증가량 1.897\",\n        \"예측 상승 기울기 0.00316192/s\"\n      ]\n    },\n    {\n      \"summary\": \"pipeSegment_copy_1782806971818_9(pipeSegment_copy_1782806971818_9)에서 만관 예측(치명) 발생\",\n      \"event\": \"만관 예측\",\n      \"eventCode\": \"PREDICTED_FULL_PIPE\",\n      \"severity\": \"치명\",\n      \"severityCode\": \"CRITICAL\",\n      \"issueId\": \"PREDICTED_FULL_PIPE:link:pipeSegment_copy_1782806971818_9\",\n      \"primaryElement\": {\n        \"category\": \"link\",\n        \"id\": \"pipeSegment_copy_1782806971818_9\"\n      },\n      \"connectedElements\": [],\n      \"metrics\": {\n        \"metric\": \"fullness\",\n        \"currentValue\": 0.05418601708074528,\n        \"predictedValue\": 1.942825356862004,\n        \"slopePerSecond\": 0.0031477322329687644,\n        \"minCurrentValue\": 0.05,\n        \"rainfallLevel\": \"heavy\",\n        \"forecastMinutes\": 10\n      },\n      \"priority\": {\n        \"priorityScore\": 203.0,\n        \"priorityBand\": \"P1\",\n        \"priorityReasons\": [\n          \"CRITICAL 위험\",\n          \"만관 위험\",\n          \"만관율 194.3%\",\n          \"예측 증가량 1.889\",\n          \"예측 상승 기울기 0.00314773/s\"\n        ],\n        \"source\": \"django\"\n      },\n      \"priorityScore\": 203.0,\n      \"priorityBand\": \"P1\",\n      \"priorityReasons\": [\n        \"CRITICAL 위험\",\n        \"만관 위험\",\n        \"만관율 194.3%\",\n        \"예측 증가량 1.889\",\n        \"예측 상승 기울기 0.00314773/s\"\n      ]\n    },\n    {\n      \"summary\": \"pipeSegment_copy_1782806971818_7(pipeSegment_copy_1782806971818_7)에서 만관 예측(치명) 발생\",\n      \"event\": \"만관 예측\",\n      \"eventCode\": \"PREDICTED_FULL_PIPE\",\n      \"severity\": \"치명\",\n      \"severityCode\": \"CRITICAL\",\n      \"issueId\": \"PREDICTED_FULL_PIPE:link:pipeSegment_copy_1782806971818_7\",\n      \"primaryElement\": {\n        \"category\": \"link\",\n        \"id\": \"pipeSegment_copy_1782806971818_7\"\n      },\n      \"connectedElements\": [],\n      \"metrics\": {\n        \"metric\": \"fullness\",\n        \"currentValue\": 0.052212485026277254,\n        \"predictedValue\": 0.9931080569686821,\n        \"slopePerSecond\": 0.0015681592865706747,\n        \"minCurrentValue\": 0.05,\n        \"rainfallLevel\": \"heavy\",\n        \"forecastMinutes\": 10\n      },\n      \"priority\": {\n        \"priorityScore\": 200.72,\n        \"priorityBand\": \"P1\",\n        \"priorityReasons\": [\n          \"CRITICAL 위험\",\n          \"만관 위험\",\n          \"만관율 99.3%\",\n          \"예측 증가량 0.941\",\n          \"예측 상승 기울기 0.00156816/s\"\n        ],\n        \"source\": \"django\"\n      },\n      \"priorityScore\": 200.72,\n      \"priorityBand\": \"P1\",\n      \"priorityReasons\": [\n        \"CRITICAL 위험\",\n        \"만관 위험\",\n        \"만관율 99.3%\",\n        \"예측 증가량 0.941\",\n        \"예측 상승 기울기 0.00156816/s\"\n      ]\n    },\n    {\n      \"summary\": \"pipeSegment_copy_1782806971818_10(pipeSegment_copy_1782806971818_10)에서 만관 예측(치명) 발생\",\n      \"event\": \"만관 예측\",\n      \"eventCode\": \"PREDICTED_FULL_PIPE\",\n      \"severity\": \"치명\",\n      \"severityCode\": \"CRITICAL\",\n      \"issueId\": \"PREDICTED_FULL_PIPE:link:pipeSegment_copy_1782806971818_10\",\n      \"primaryElement\": {\n        \"category\": \"link\",\n        \"id\": \"pipeSegment_copy_1782806971818_10\"\n      },\n      \"connectedElements\": [],\n      \"metrics\": {\n        \"metric\": \"fullness\",\n        \"currentValue\": 0.05268047282551641,\n        \"predictedValue\": 0.9518682172063269,\n        \"slopePerSecond\": 0.0014986462406346842,\n        \"minCurrentValue\": 0.05,\n        \"rainfallLevel\": \"heavy\",\n        \"forecastMinutes\": 10\n      },\n      \"priority\": {\n        \"priorityScore\": 193.28,\n        \"priorityBand\": \"P1\",\n        \"priorityReasons\": [\n          \"CRITICAL 위험\",\n          \"만관 위험\",\n          \"만관율 95.2%\",\n          \"예측 증가량 0.899\",\n          \"예측 상승 기울기 0.00149865/s\"\n        ],\n        \"source\": \"django\"\n      },\n      \"priorityScore\": 193.28,\n      \"priorityBand\": \"P1\",\n      \"priorityReasons\": [\n        \"CRITICAL 위험\",\n        \"만관 위험\",\n        \"만관율 95.2%\",\n        \"예측 증가량 0.899\",\n        \"예측 상승 기울기 0.00149865/s\"\n      ]\n    }\n  ],\n  \"priorityTargets\": [\n    {\n      \"rank\": 1,\n      \"targetId\": \"catchBasin_copy_1782806971818_1\",\n      \"targetType\": \"node\",\n      \"riskLabel\": \"수위 상승 예측\",\n      \"riskCode\": \"PREDICTED_NODE_DEPTH\",\n      \"severity\": \"치명\",\n      \"severityCode\": \"CRITICAL\",\n      \"priorityScore\": 223.0,\n      \"priorityBand\": \"P1\",\n      \"priorityReasons\": [\n        \"CRITICAL 위험\",\n        \"node 수위 위험\",\n        \"node 위험은 현장 침수 접점에 가까움\",\n        \"node 수위 비율 200.0%\",\n        \"예측 증가량 1.874\",\n        \"예측 상승 기울기 0.00788305/s\"\n      ],\n      \"prioritySource\": \"django\",\n      \"metrics\": {\n        \"metric\": \"depthRatio\",\n        \"currentValue\": 0.1255254352786932,\n        \"predictedValue\": 2.0,\n        \"slopePerSecond\": 0.007883047324917514,\n        \"minCurrentValue\": 0.05,\n        \"rainfallLevel\": \"heavy\",\n        \"forecastMinutes\": 10\n      }\n    },\n    {\n      \"rank\": 2,\n      \"targetId\": \"catchBasin_copy_1782806971818_2\",\n      \"targetType\": \"node\",\n      \"riskLabel\": \"수위 상승 예측\",\n      \"riskCode\": \"PREDICTED_NODE_DEPTH\",\n      \"severity\": \"치명\",\n      \"severityCode\": \"CRITICAL\",\n      \"priorityScore\": 223.0,\n      \"priorityBand\": \"P1\",\n      \"priorityReasons\": [\n        \"CRITICAL 위험\",\n        \"node 수위 위험\",\n        \"node 위험은 현장 침수 접점에 가까움\",\n        \"node 수위 비율 200.0%\",\n        \"예측 증가량 1.874\",\n        \"예측 상승 기울기 0.00788305/s\"\n      ],\n      \"prioritySource\": \"django\",\n      \"metrics\": {\n        \"metric\": \"depthRatio\",\n        \"currentValue\": 0.12552564009248993,\n        \"predictedValue\": 2.0,\n        \"slopePerSecond\": 0.007883047324917514,\n        \"minCurrentValue\": 0.05,\n        \"rainfallLevel\": \"heavy\",\n        \"forecastMinutes\": 10\n      }\n    },\n    {\n      \"rank\": 3,\n      \"targetId\": \"catchBasin_copy_1782806971818_3\",\n      \"targetType\": \"node\",\n      \"riskLabel\": \"수위 상승 예측\",\n      \"riskCode\": \"PREDICTED_NODE_DEPTH\",\n      \"severity\": \"치명\",\n      \"severityCode\": \"CRITICAL\",\n      \"priorityScore\": 223.0,\n      \"priorityBand\": \"P1\",\n      \"priorityReasons\": [\n        \"CRITICAL 위험\",\n        \"node 수위 위험\",\n        \"node 위험은 현장 침수 접점에 가까움\",\n        \"node 수위 비율 200.0%\",\n        \"예측 증가량 1.874\",\n        \"예측 상승 기울기 0.00788305/s\"\n      ],\n      \"prioritySource\": \"django\",\n      \"metrics\": {\n        \"metric\": \"depthRatio\",\n        \"currentValue\": 0.12552518089705683,\n        \"predictedValue\": 2.0,\n        \"slopePerSecond\": 0.007883047324917514,\n        \"minCurrentValue\": 0.05,\n        \"rainfallLevel\": \"heavy\",\n        \"forecastMinutes\": 10\n      }\n    },\n    {\n      \"rank\": 4,\n      \"targetId\": \"link_copy_1782806971818_15_CONDUIT\",\n      \"targetType\": \"link\",\n      \"riskLabel\": \"관로 용량 초과 예측\",\n      \"riskCode\": \"PREDICTED_CAPACITY_EXCEEDED\",\n      \"severity\": \"치명\",\n      \"severityCode\": \"CRITICAL\",\n      \"priorityScore\": 210.0,\n      \"priorityBand\": \"P1\",\n      \"priorityReasons\": [\n        \"CRITICAL 위험\",\n        \"용량 초과 위험\",\n        \"용량 비율 276.7%\",\n        \"예측 증가량 2.716\",\n        \"예측 상승 기울기 0.00452749/s\"\n      ],\n      \"prioritySource\": \"django\",\n      \"metrics\": {\n        \"metric\": \"capacityRatio\",\n        \"currentValue\": 0.0509601868606134,\n        \"predictedValue\": 2.767456995713616,\n        \"slopePerSecond\": 0.004527494681421671,\n        \"minCurrentValue\": 0.05,\n        \"rainfallLevel\": \"heavy\",\n        \"forecastMinutes\": 10\n      }\n    },\n    {\n      \"rank\": 5,\n      \"targetId\": \"link_copy_1782806971818_3_CONDUIT\",\n      \"targetType\": \"link\",\n      \"riskLabel\": \"관로 용량 초과 예측\",\n      \"riskCode\": \"PREDICTED_CAPACITY_EXCEEDED\",\n      \"severity\": \"치명\",\n      \"severityCode\": \"CRITICAL\",\n      \"priorityScore\": 210.0,\n      \"priorityBand\": \"P1\",\n      \"priorityReasons\": [\n        \"CRITICAL 위험\",\n        \"용량 초과 위험\",\n        \"용량 비율 276.7%\",\n        \"예측 증가량 2.716\",\n        \"예측 상승 기울기 0.00452749/s\"\n      ],\n      \"prioritySource\": \"django\",\n      \"metrics\": {\n        \"metric\": \"capacityRatio\",\n        \"currentValue\": 0.050959080856645265,\n        \"predictedValue\": 2.7674558897096477,\n        \"slopePerSecond\": 0.004527494681421671,\n        \"minCurrentValue\": 0.05,\n        \"rainfallLevel\": \"heavy\",\n        \"forecastMinutes\": 10\n      }\n    },\n    {\n      \"rank\": 6,\n      \"targetId\": \"link_copy_1782806971818_9_CONDUIT\",\n      \"targetType\": \"link\",\n      \"riskLabel\": \"관로 용량 초과 예측\",\n      \"riskCode\": \"PREDICTED_CAPACITY_EXCEEDED\",\n      \"severity\": \"치명\",\n      \"severityCode\": \"CRITICAL\",\n      \"priorityScore\": 210.0,\n      \"priorityBand\": \"P1\",\n      \"priorityReasons\": [\n        \"CRITICAL 위험\",\n        \"용량 초과 위험\",\n        \"용량 비율 276.7%\",\n        \"예측 증가량 2.716\",\n        \"예측 상승 기울기 0.00452749/s\"\n      ],\n      \"prioritySource\": \"django\",\n      \"metrics\": {\n        \"metric\": \"capacityRatio\",\n        \"currentValue\": 0.05095803582934069,\n        \"predictedValue\": 2.7674548446823435,\n        \"slopePerSecond\": 0.004527494681421671,\n        \"minCurrentValue\": 0.05,\n        \"rainfallLevel\": \"heavy\",\n        \"forecastMinutes\": 10\n      }\n    },\n    {\n      \"rank\": 7,\n      \"targetId\": \"link_copy_1782806971818_15_CONDUIT\",\n      \"targetType\": \"link\",\n      \"riskLabel\": \"만관 예측\",\n      \"riskCode\": \"PREDICTED_FULL_PIPE\",\n      \"severity\": \"치명\",\n      \"severityCode\": \"CRITICAL\",\n      \"priorityScore\": 203.0,\n      \"priorityBand\": \"P1\",\n      \"priorityReasons\": [\n        \"CRITICAL 위험\",\n        \"만관 위험\",\n        \"만관율 200.0%\",\n        \"예측 증가량 1.920\",\n        \"예측 상승 기울기 0.00688341/s\"\n      ],\n      \"prioritySource\": \"django\",\n      \"metrics\": {\n        \"metric\": \"fullness\",\n        \"currentValue\": 0.08018355403320036,\n        \"predictedValue\": 2.0,\n        \"slopePerSecond\": 0.006883408371033253,\n        \"minCurrentValue\": 0.05,\n        \"rainfallLevel\": \"heavy\",\n        \"forecastMinutes\": 10\n      }\n    },\n    {\n      \"rank\": 8,\n      \"targetId\": \"link_copy_1782806971818_3_CONDUIT\",\n      \"targetType\": \"link\",\n      \"riskLabel\": \"만관 예측\",\n      \"riskCode\": \"PREDICTED_FULL_PIPE\",\n      \"severity\": \"치명\",\n      \"severityCode\": \"CRITICAL\",\n      \"priorityScore\": 203.0,\n      \"priorityBand\": \"P1\",\n      \"priorityReasons\": [\n        \"CRITICAL 위험\",\n        \"만관 위험\",\n        \"만관율 200.0%\",\n        \"예측 증가량 1.920\",\n        \"예측 상승 기울기 0.00688341/s\"\n      ],\n      \"prioritySource\": \"django\",\n      \"metrics\": {\n        \"metric\": \"fullness\",\n        \"currentValue\": 0.08018529275913193,\n        \"predictedValue\": 2.0,\n        \"slopePerSecond\": 0.006883408371033253,\n        \"minCurrentValue\": 0.05,\n        \"rainfallLevel\": \"heavy\",\n        \"forecastMinutes\": 10\n      }\n    },\n    {\n      \"rank\": 9,\n      \"targetId\": \"link_copy_1782806971818_9_CONDUIT\",\n      \"targetType\": \"link\",\n      \"riskLabel\": \"만관 예측\",\n      \"riskCode\": \"PREDICTED_FULL_PIPE\",\n      \"severity\": \"치명\",\n      \"severityCode\": \"CRITICAL\",\n      \"priorityScore\": 203.0,\n      \"priorityBand\": \"P1\",\n      \"priorityReasons\": [\n        \"CRITICAL 위험\",\n        \"만관 위험\",\n        \"만관율 200.0%\",\n        \"예측 증가량 1.920\",\n        \"예측 상승 기울기 0.00688341/s\"\n      ],\n      \"prioritySource\": \"django\",\n      \"metrics\": {\n        \"metric\": \"fullness\",\n        \"currentValue\": 0.0801869618767293,\n        \"predictedValue\": 2.0,\n        \"slopePerSecond\": 0.006883408371033253,\n        \"minCurrentValue\": 0.05,\n        \"rainfallLevel\": \"heavy\",\n        \"forecastMinutes\": 10\n      }\n    },\n    {\n      \"rank\": 10,\n      \"targetId\": \"pipeSegment_copy_1782806971818_2\",\n      \"targetType\": \"link\",\n      \"riskLabel\": \"만관 예측\",\n      \"riskCode\": \"PREDICTED_FULL_PIPE\",\n      \"severity\": \"치명\",\n      \"severityCode\": \"CRITICAL\",\n      \"priorityScore\": 203.0,\n      \"priorityBand\": \"P1\",\n      \"priorityReasons\": [\n        \"CRITICAL 위험\",\n        \"만관 위험\",\n        \"만관율 200.0%\",\n        \"예측 증가량 1.886\",\n        \"예측 상승 기울기 0.00730409/s\"\n      ],\n      \"prioritySource\": \"django\",\n      \"metrics\": {\n        \"metric\": \"fullness\",\n        \"currentValue\": 0.11370655038722612,\n        \"predictedValue\": 2.0,\n        \"slopePerSecond\": 0.007304085280588198,\n        \"minCurrentValue\": 0.05,\n        \"rainfallLevel\": \"heavy\",\n        \"forecastMinutes\": 10\n      }\n    },\n    {\n      \"rank\": 11,\n      \"targetId\": \"pipeSegment_copy_1782806971818_3\",\n      \"targetType\": \"link\",\n      \"riskLabel\": \"만관 예측\",\n      \"riskCode\": \"PREDICTED_FULL_PIPE\",\n      \"severity\": \"치명\",\n      \"severityCode\": \"CRITICAL\",\n      \"priorityScore\": 203.0,\n      \"priorityBand\": \"P1\",\n      \"priorityReasons\": [\n        \"CRITICAL 위험\",\n        \"만관 위험\",\n        \"만관율 195.2%\",\n        \"예측 증가량 1.897\",\n        \"예측 상승 기울기 0.00316192/s\"\n      ],\n      \"prioritySource\": \"django\",\n      \"metrics\": {\n        \"metric\": \"fullness\",\n        \"currentValue\": 0.054915443691418604,\n        \"predictedValue\": 1.9520649220643225,\n        \"slopePerSecond\": 0.0031619157972881734,\n        \"minCurrentValue\": 0.05,\n        \"rainfallLevel\": \"heavy\",\n        \"forecastMinutes\": 10\n      }\n    },\n    {\n      \"rank\": 12,\n      \"targetId\": \"pipeSegment_copy_1782806971818_5\",\n      \"targetType\": \"link\",\n      \"riskLabel\": \"만관 예측\",\n      \"riskCode\": \"PREDICTED_FULL_PIPE\",\n      \"severity\": \"치명\",\n      \"severityCode\": \"CRITICAL\",\n      \"priorityScore\": 203.0,\n      \"priorityBand\": \"P1\",\n      \"priorityReasons\": [\n        \"CRITICAL 위험\",\n        \"만관 위험\",\n        \"만관율 200.0%\",\n        \"예측 증가량 1.886\",\n        \"예측 상승 기울기 0.00730409/s\"\n      ],\n      \"prioritySource\": \"django\",\n      \"metrics\": {\n        \"metric\": \"fullness\",\n        \"currentValue\": 0.11365498702496507,\n        \"predictedValue\": 2.0,\n        \"slopePerSecond\": 0.007304085280588198,\n        \"minCurrentValue\": 0.05,\n        \"rainfallLevel\": \"heavy\",\n        \"forecastMinutes\": 10\n      }\n    },\n    {\n      \"rank\": 13,\n      \"targetId\": \"pipeSegment_copy_1782806971818_6\",\n      \"targetType\": \"link\",\n      \"riskLabel\": \"만관 예측\",\n      \"riskCode\": \"PREDICTED_FULL_PIPE\",\n      \"severity\": \"치명\",\n      \"severityCode\": \"CRITICAL\",\n      \"priorityScore\": 203.0,\n      \"priorityBand\": \"P1\",\n      \"priorityReasons\": [\n        \"CRITICAL 위험\",\n        \"만관 위험\",\n        \"만관율 159.4%\",\n        \"예측 증가량 1.544\",\n        \"예측 상승 기울기 0.00257377/s\"\n      ],\n      \"prioritySource\": \"django\",\n      \"metrics\": {\n        \"metric\": \"fullness\",\n        \"currentValue\": 0.050006325488856425,\n        \"predictedValue\": 1.5942670468855442,\n        \"slopePerSecond\": 0.0025737678689944795,\n        \"minCurrentValue\": 0.05,\n        \"rainfallLevel\": \"heavy\",\n        \"forecastMinutes\": 10\n      }\n    },\n    {\n      \"rank\": 14,\n      \"targetId\": \"pipeSegment_copy_1782806971818_8\",\n      \"targetType\": \"link\",\n      \"riskLabel\": \"만관 예측\",\n      \"riskCode\": \"PREDICTED_FULL_PIPE\",\n      \"severity\": \"치명\",\n      \"severityCode\": \"CRITICAL\",\n      \"priorityScore\": 203.0,\n      \"priorityBand\": \"P1\",\n      \"priorityReasons\": [\n        \"CRITICAL 위험\",\n        \"만관 위험\",\n        \"만관율 200.0%\",\n        \"예측 증가량 1.886\",\n        \"예측 상승 기울기 0.00730409/s\"\n      ],\n      \"prioritySource\": \"django\",\n      \"metrics\": {\n        \"metric\": \"fullness\",\n        \"currentValue\": 0.1137545388550746,\n        \"predictedValue\": 2.0,\n        \"slopePerSecond\": 0.007304085280588198,\n        \"minCurrentValue\": 0.05,\n        \"rainfallLevel\": \"heavy\",\n        \"forecastMinutes\": 10\n      }\n    },\n    {\n      \"rank\": 15,\n      \"targetId\": \"pipeSegment_copy_1782806971818_9\",\n      \"targetType\": \"link\",\n      \"riskLabel\": \"만관 예측\",\n      \"riskCode\": \"PREDICTED_FULL_PIPE\",\n      \"severity\": \"치명\",\n      \"severityCode\": \"CRITICAL\",\n      \"priorityScore\": 203.0,\n      \"priorityBand\": \"P1\",\n      \"priorityReasons\": [\n        \"CRITICAL 위험\",\n        \"만관 위험\",\n        \"만관율 194.3%\",\n        \"예측 증가량 1.889\",\n        \"예측 상승 기울기 0.00314773/s\"\n      ],\n      \"prioritySource\": \"django\",\n      \"metrics\": {\n        \"metric\": \"fullness\",\n        \"currentValue\": 0.05418601708074528,\n        \"predictedValue\": 1.942825356862004,\n        \"slopePerSecond\": 0.0031477322329687644,\n        \"minCurrentValue\": 0.05,\n        \"rainfallLevel\": \"heavy\",\n        \"forecastMinutes\": 10\n      }\n    },\n    {\n      \"rank\": 16,\n      \"targetId\": \"pipeSegment_copy_1782806971818_7\",\n      \"targetType\": \"link\",\n      \"riskLabel\": \"만관 예측\",\n      \"riskCode\": \"PREDICTED_FULL_PIPE\",\n      \"severity\": \"치명\",\n      \"severityCode\": \"CRITICAL\",\n      \"priorityScore\": 200.72,\n      \"priorityBand\": \"P1\",\n      \"priorityReasons\": [\n        \"CRITICAL 위험\",\n        \"만관 위험\",\n        \"만관율 99.3%\",\n        \"예측 증가량 0.941\",\n        \"예측 상승 기울기 0.00156816/s\"\n      ],\n      \"prioritySource\": \"django\",\n      \"metrics\": {\n        \"metric\": \"fullness\",\n        \"currentValue\": 0.052212485026277254,\n        \"predictedValue\": 0.9931080569686821,\n        \"slopePerSecond\": 0.0015681592865706747,\n        \"minCurrentValue\": 0.05,\n        \"rainfallLevel\": \"heavy\",\n        \"forecastMinutes\": 10\n      }\n    },\n    {\n      \"rank\": 17,\n      \"targetId\": \"pipeSegment_copy_1782806971818_10\",\n      \"targetType\": \"link\",\n      \"riskLabel\": \"만관 예측\",\n      \"riskCode\": \"PREDICTED_FULL_PIPE\",\n      \"severity\": \"치명\",\n      \"severityCode\": \"CRITICAL\",\n      \"priorityScore\": 193.28,\n      \"priorityBand\": \"P1\",\n      \"priorityReasons\": [\n        \"CRITICAL 위험\",\n        \"만관 위험\",\n        \"만관율 95.2%\",\n        \"예측 증가량 0.899\",\n        \"예측 상승 기울기 0.00149865/s\"\n      ],\n      \"prioritySource\": \"django\",\n      \"metrics\": {\n        \"metric\": \"fullness\",\n        \"currentValue\": 0.05268047282551641,\n        \"predictedValue\": 0.9518682172063269,\n        \"slopePerSecond\": 0.0014986462406346842,\n        \"minCurrentValue\": 0.05,\n        \"rainfallLevel\": \"heavy\",\n        \"forecastMinutes\": 10\n      }\n    },\n    {\n      \"rank\": 18,\n      \"targetId\": \"pipeSegment_copy_1782806971818_1\",\n      \"targetType\": \"link\",\n      \"riskLabel\": \"막힘 폐쇄 예측\",\n      \"riskCode\": \"PREDICTED_BLOCKAGE_CLOSED\",\n      \"severity\": \"치명\",\n      \"severityCode\": \"CRITICAL\",\n      \"priorityScore\": 185.0,\n      \"priorityBand\": \"P1\",\n      \"priorityReasons\": [\n        \"CRITICAL 위험\",\n        \"막힘 위험\",\n        \"막힘 비율 100%\"\n      ],\n      \"prioritySource\": \"django\",\n      \"metrics\": {\n        \"metric\": \"blockageRatio\",\n        \"currentValue\": 1.0,\n        \"predictedValue\": 1.0,\n        \"slopePerSecond\": 0.0,\n        \"minCurrentValue\": 0.8,\n        \"rainfallLevel\": \"heavy\",\n        \"forecastMinutes\": 10\n      }\n    }\n  ],\n  \"past_history\": []\n}"
+    }
+  ]
+}

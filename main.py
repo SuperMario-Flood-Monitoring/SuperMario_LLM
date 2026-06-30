@@ -49,14 +49,14 @@ class AnalyzeBaseRequest(BaseModel):
 
 
 class AnalyzeRequest(AnalyzeBaseRequest):
-    TELEGRAM_BOT_TOKEN: str
-    TELEGRAM_CHAT_ID: list[str]
+    TELEGRAM_BOT_TOKEN: str | None = None
+    TELEGRAM_CHAT_ID: list[str] | None = None
 
     @field_validator("TELEGRAM_CHAT_ID", mode="before")
     @classmethod
-    def normalize_chat_ids(cls, value: object) -> list[str]:
+    def normalize_chat_ids(cls, value: object) -> list[str] | None:
         if value is None:
-            raise ValueError("TELEGRAM_CHAT_ID는 필수입니다.")
+            return None
         if isinstance(value, (str, int)):
             return [str(value)]
         if isinstance(value, list):
@@ -98,6 +98,22 @@ def _attach_past_history(analysis_input: dict) -> dict:
     source_ids = extract_source_ids(analysis_input)
     analysis_input["past_history"] = get_maintenance_history_by_source_ids(source_ids)
     return analysis_input
+
+
+def _env_chat_ids() -> list[str]:
+    raw = os.getenv("TELEGRAM_CHAT_ID", "")
+    return [chat_id.strip() for chat_id in raw.split(",") if chat_id.strip()]
+
+
+def _telegram_bot_token(request_token: str | None) -> str:
+    normalized = (request_token or "").strip()
+    return normalized or os.getenv("TELEGRAM_BOT_TOKEN", "").strip()
+
+
+def _telegram_chat_ids(request_chat_ids: list[str] | None) -> list[str]:
+    if request_chat_ids is None:
+        return _env_chat_ids()
+    return request_chat_ids
 
 
 def _build_context_summary(analysis_input: dict) -> dict:
@@ -202,8 +218,8 @@ async def analyze(request: AnalyzeRequest):
         sent_to = await send_analysis_message(
             request.id,
             analysis,
-            bot_token=request.TELEGRAM_BOT_TOKEN,
-            chat_ids=request.TELEGRAM_CHAT_ID,
+            bot_token=_telegram_bot_token(request.TELEGRAM_BOT_TOKEN),
+            chat_ids=_telegram_chat_ids(request.TELEGRAM_CHAT_ID),
         )
     except ValueError as exc:
         raise HTTPException(status_code=500, detail=str(exc)) from exc
