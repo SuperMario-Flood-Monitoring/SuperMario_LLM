@@ -9,6 +9,12 @@ EVENT_TYPE_LABELS = {
     "FLOODING": "침수",
     "HIGH_DEPTH": "수위 상승",
     "LOW_FLOW": "유량 저하",
+    "PREDICTED_FULL_PIPE": "만관 예측",
+    "PREDICTED_CAPACITY_EXCEEDED": "관로 용량 초과 예측",
+    "PREDICTED_NODE_DEPTH": "수위 상승 예측",
+    "PREDICTED_FLOODING": "침수 예측",
+    "PREDICTED_BLOCKAGE_CLOSED": "막힘 폐쇄 예측",
+    "PREDICTED_BLOCKAGE_HIGH": "막힘 증가 예측",
 }
 
 SEVERITY_LABELS = {
@@ -75,11 +81,11 @@ def _classify_element(element_id: str, category_hint: str | None = None) -> str:
             return "editor_object"
 
     lowered = element_id.lower()
-    if "pipe" in lowered or lowered.startswith("pipe"):
+    if "pipe" in lowered or "conduit" in lowered or lowered.startswith("pipe"):
         return "link"
     if any(token in element_id for token in ("teeconnector", "connector", "conn_")):
         return "editor_object"
-    if any(token in lowered for token in ("junction", "outfall", "divider", "storage")):
+    if any(token in lowered for token in ("junction", "outfall", "divider", "storage", "catch_basin")):
         return "node"
     if "node" in lowered:
         return "node"
@@ -108,19 +114,31 @@ def _unique_list(values: list[str]) -> list[str]:
 
 
 def _metric_fields(source: dict[str, Any]) -> dict[str, Any]:
+    nested_metrics = source.get("metrics") if isinstance(source.get("metrics"), dict) else {}
+    metric_source = {**nested_metrics, **source}
     metrics = _drop_empty_values(
         {
-            "flowCms": source.get("flowCms"),
-            "depthRatio": source.get("depthRatio"),
-            "fullness": source.get("fullness"),
-            "blockageRatio": source.get("blockageRatio"),
-            "direction": source.get("direction"),
-            "rainfallRatio": source.get("rainfallRatio"),
-            "rainfallPercent": source.get("rainfallPercent"),
-            "maxRainfallMmPerHour": source.get("maxRainfallMmPerHour"),
-            "flooded": source.get("flooded"),
-            "pondingDepth": source.get("pondingDepth"),
-            "invertElevation": source.get("invertElevation"),
+            "metric": metric_source.get("metric"),
+            "currentValue": metric_source.get("currentValue"),
+            "predictedValue": metric_source.get("predictedValue"),
+            "slopePerSecond": metric_source.get("slopePerSecond"),
+            "minCurrentValue": metric_source.get("minCurrentValue"),
+            "rainfallLevel": metric_source.get("rainfallLevel"),
+            "forecastMinutes": metric_source.get("forecastMinutes"),
+            "flowCms": metric_source.get("flowCms"),
+            "velocityMps": metric_source.get("velocityMps"),
+            "depthRatio": metric_source.get("depthRatio"),
+            "fullness": metric_source.get("fullness"),
+            "capacityRatio": metric_source.get("capacityRatio"),
+            "blockageRatio": metric_source.get("blockageRatio"),
+            "direction": metric_source.get("direction"),
+            "rainfallRatio": metric_source.get("rainfallRatio"),
+            "rainfallPercent": metric_source.get("rainfallPercent"),
+            "maxRainfallMmPerHour": metric_source.get("maxRainfallMmPerHour"),
+            "floodingCms": metric_source.get("floodingCms"),
+            "flooded": metric_source.get("flooded"),
+            "pondingDepth": metric_source.get("pondingDepth"),
+            "invertElevation": metric_source.get("invertElevation"),
         }
     )
 
@@ -134,13 +152,14 @@ def _metric_fields(source: dict[str, Any]) -> dict[str, Any]:
 
 def _event_brief(issue: dict[str, Any], parsed: dict[str, str | None]) -> dict[str, Any]:
     event_type = issue.get("eventType") or parsed.get("eventType")
+    issue_id = issue.get("issueId") or issue.get("eventId")
     return _drop_empty_values(
         {
             "event": EVENT_TYPE_LABELS.get(event_type, event_type),
             "eventCode": event_type,
             "severity": SEVERITY_LABELS.get(issue.get("severity"), issue.get("severity")),
             "severityCode": issue.get("severity"),
-            "issueId": issue.get("issueId"),
+            "issueId": issue_id,
         }
     )
 
@@ -245,6 +264,160 @@ def _format_issue_summary(
     return f"{display_name}({element_id})에서 {event_label}({severity_label}) 발생"
 
 
+def _as_float(value: Any) -> float | None:
+    if isinstance(value, (int, float)):
+        return float(value)
+    if isinstance(value, str):
+        try:
+            return float(value)
+        except ValueError:
+            return None
+    return None
+
+
+def _band_from_score(score: float) -> str:
+    if score >= 85:
+        return "P1"
+    if score >= 70:
+        return "P2"
+    if score >= 50:
+        return "P3"
+    return "P4"
+
+
+def _extract_priority(issue: dict[str, Any]) -> dict[str, Any] | None:
+    score = issue.get("priorityScore")
+    band = issue.get("priorityBand")
+    reasons = issue.get("priorityReasons")
+
+    if score is None and band is None and reasons is None:
+        return None
+
+    normalized_reasons = reasons if isinstance(reasons, list) else []
+    return _drop_empty_values(
+        {
+            "priorityScore": score,
+            "priorityBand": band,
+            "priorityReasons": [str(reason) for reason in normalized_reasons],
+            "source": "django",
+        }
+    )
+
+
+def _fallback_priority(issue: dict[str, Any]) -> dict[str, Any]:
+    score = 0.0
+    reasons: list[str] = []
+    severity = issue.get("severityCode") or issue.get("severity")
+    event_code = issue.get("eventCode")
+    primary = issue.get("primaryElement") or {}
+    category = primary.get("category")
+    metrics = issue.get("metrics") or {}
+
+    if severity == "CRITICAL" or severity == "치명":
+        score += 50
+        reasons.append("매우 위험 등급")
+    elif severity == "HIGH" or severity == "높음":
+        score += 35
+        reasons.append("높은 위험 등급")
+    elif severity == "WARNING":
+        score += 25
+        reasons.append("주의 위험 등급")
+
+    event_weights = {
+        "PREDICTED_FLOODING": (30, "침수 위험"),
+        "OVERFLOW": (30, "월류 위험"),
+        "FLOODING": (30, "침수 위험"),
+        "PREDICTED_FULL_PIPE": (25, "만관 위험"),
+        "PREDICTED_CAPACITY_EXCEEDED": (25, "관로 용량 초과 위험"),
+        "SURCHARGE": (25, "만관 위험"),
+        "PREDICTED_NODE_DEPTH": (20, "수위 상승 위험"),
+        "HIGH_DEPTH": (20, "수위 상승 위험"),
+        "REVERSE_FLOW": (20, "역류 위험"),
+        "PREDICTED_BLOCKAGE_CLOSED": (20, "막힘 폐쇄 위험"),
+        "PREDICTED_BLOCKAGE_HIGH": (15, "막힘 증가 위험"),
+        "BLOCKAGE": (15, "막힘 위험"),
+    }
+    if event_code in event_weights:
+        weight, reason = event_weights[event_code]
+        score += weight
+        reasons.append(reason)
+
+    for metric_name, threshold, weight, reason in (
+        ("predictedValue", 0.95, 15, "예측값이 위험 기준에 근접"),
+        ("currentValue", 0.9, 10, "현재값이 위험 기준에 근접"),
+        ("fullness", 0.95, 15, "만관율 높음"),
+        ("capacityRatio", 1.0, 15, "용량 초과"),
+        ("depthRatio", 0.9, 12, "수위 비율 높음"),
+        ("blockageRatio", 0.8, 12, "막힘 비율 높음"),
+    ):
+        metric_value = _as_float(metrics.get(metric_name))
+        if metric_value is not None and metric_value >= threshold:
+            score += weight
+            reasons.append(reason)
+
+    flooding_cms = _as_float(metrics.get("floodingCms"))
+    if flooding_cms is not None and flooding_cms > 0:
+        score += 20
+        reasons.append("침수 유량 발생")
+
+    if category == "node":
+        score += 5
+        reasons.append("현장 침수 접점에 가까운 지점")
+
+    return {
+        "priorityScore": round(score, 1),
+        "priorityBand": _band_from_score(score),
+        "priorityReasons": _unique_list(reasons),
+        "source": "fallback",
+    }
+
+
+def _priority_sort_key(target: dict[str, Any]) -> tuple[int, float, str]:
+    band_order = {"P1": 0, "P2": 1, "P3": 2, "P4": 3}
+    score = _as_float(target.get("priorityScore")) or 0.0
+    return (
+        band_order.get(str(target.get("priorityBand")), 9),
+        -score,
+        str(target.get("targetId") or ""),
+    )
+
+
+def _build_priority_targets(issues: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    targets: list[dict[str, Any]] = []
+
+    for issue in issues:
+        primary = issue.get("primaryElement") or {}
+        target_id = primary.get("id")
+        if not target_id:
+            continue
+
+        priority = issue.get("priority") or _fallback_priority(issue)
+        targets.append(
+            _drop_empty_values(
+                {
+                    "rank": 0,
+                    "targetId": target_id,
+                    "targetType": primary.get("category"),
+                    "targetName": primary.get("name"),
+                    "riskLabel": issue.get("event"),
+                    "riskCode": issue.get("eventCode"),
+                    "severity": issue.get("severity"),
+                    "severityCode": issue.get("severityCode"),
+                    "priorityScore": priority.get("priorityScore"),
+                    "priorityBand": priority.get("priorityBand"),
+                    "priorityReasons": priority.get("priorityReasons") or [],
+                    "prioritySource": priority.get("source"),
+                    "metrics": issue.get("metrics"),
+                }
+            )
+        )
+
+    targets.sort(key=_priority_sort_key)
+    for index, target in enumerate(targets, start=1):
+        target["rank"] = index
+    return targets
+
+
 def _extract_issue_elements(
     issue: dict[str, Any],
     parsed: dict[str, str | None],
@@ -252,7 +425,7 @@ def _extract_issue_elements(
 ) -> tuple[dict[str, Any], list[dict[str, Any]]]:
     source_id = issue.get("sourceId") or parsed.get("elementId") or ""
     source_name = issue.get("displayName") or issue.get("sourceEditorName")
-    source_category = _classify_element(source_id, parsed.get("elementCategory"))
+    source_category = _classify_element(source_id, issue.get("source") or parsed.get("elementCategory"))
     metrics = _metric_fields(issue)
 
     primary = _make_element(
@@ -334,6 +507,7 @@ def _build_affected_elements(
         upstream = next((item for item in related if "upstream_endpoint" in item.get("roles", [])), None)
         downstream = next((item for item in related if "downstream_endpoint" in item.get("roles", [])), None)
 
+        priority = _extract_priority(issue)
         formatted_issues.append(
             _drop_empty_values(
                 {
@@ -371,6 +545,10 @@ def _build_affected_elements(
                         for element in related
                     ],
                     "metrics": _metric_fields(issue) or None,
+                    "priority": priority,
+                    "priorityScore": priority.get("priorityScore") if priority else None,
+                    "priorityBand": priority.get("priorityBand") if priority else None,
+                    "priorityReasons": priority.get("priorityReasons") if priority else None,
                 }
             )
         )
@@ -457,9 +635,11 @@ ISSUE_LIST_KEYS = (
 )
 
 ISSUE_ENRICHMENT_KEYS = (
+    "eventId",
     "issueId",
     "eventType",
     "severity",
+    "source",
     "sourceId",
     "displayName",
     "sourceEditorName",
@@ -475,6 +655,14 @@ ISSUE_ENRICHMENT_KEYS = (
     "rainfallRatio",
     "rainfallPercent",
     "maxRainfallMmPerHour",
+    "capacityRatio",
+    "velocityMps",
+    "floodingCms",
+    "metrics",
+    "reason",
+    "priorityScore",
+    "priorityBand",
+    "priorityReasons",
 )
 
 
@@ -600,11 +788,15 @@ def _extract_raw_issues(raw: dict[str, Any]) -> list[dict[str, Any]]:
 
 
 def _merge_simulation_metadata(raw: dict[str, Any], issues: list[dict[str, Any]]) -> dict[str, Any]:
+    nested_simulation = raw.get("simulation") if isinstance(raw.get("simulation"), dict) else {}
     simulation = _drop_empty_values(
         {
-            "modelTime": raw.get("modelTime"),
-            "runId": raw.get("runId"),
-            "stepIndex": raw.get("stepIndex"),
+            "modelTime": raw.get("modelTime") or nested_simulation.get("modelTime"),
+            "runId": raw.get("runId") or nested_simulation.get("runId"),
+            "stepIndex": raw.get("stepIndex") or nested_simulation.get("stepIndex"),
+            "forecastMinutes": nested_simulation.get("forecastMinutes"),
+            "windowSeconds": nested_simulation.get("windowSeconds"),
+            "control": nested_simulation.get("control"),
             "status": STATUS_LABELS.get(raw.get("status"), raw.get("status")),
             "statusCode": raw.get("status"),
             "reason": REASON_LABELS.get(raw.get("reason"), raw.get("reason")),
@@ -616,6 +808,8 @@ def _merge_simulation_metadata(raw: dict[str, Any], issues: list[dict[str, Any]]
             "riskEventCount": raw.get("riskEventCount"),
             "contextLevel": raw.get("contextLevel"),
             "loggedAt": raw.get("loggedAt"),
+            "schemaVersion": raw.get("schemaVersion"),
+            "systemMeta": raw.get("systemMeta"),
         }
     )
 
@@ -659,6 +853,7 @@ def format_swmm_raw_data(swmm_raw_data: str) -> dict[str, Any]:
         "affectedElements": affected_elements,
         "affectedElementsSummary": _summarize_inventory(affected_elements),
         "issues": formatted_issues,
+        "priorityTargets": _build_priority_targets(formatted_issues),
     }
 
 
@@ -699,6 +894,7 @@ def build_analysis_payload(scenario_id: str, weather_data: dict[str, Any], swmm_
         "editorObject": [_simplify_element_for_llm(item) for item in affected["editorObjects"]],
         "swmmSimulation": swmm_context["simulation"],
         "swmmIssues": swmm_context["issues"],
+        "priorityTargets": swmm_context["priorityTargets"],
     }
 
 
@@ -706,13 +902,27 @@ def build_llm_message(analysis_input: dict[str, Any]) -> str:
     lines = [
         "아래 JSON을 분석하세요.",
         "",
-        "[영향 시설 요약 - 응답 3번 항목에 반드시 사용]",
+        "[현장 우선순위 - 반드시 이 순서를 따를 것]",
     ]
 
+    priority_targets = analysis_input.get("priorityTargets") or []
+    if not priority_targets:
+        lines.append("- 우선순위 산정 정보 없음")
+    else:
+        for target in priority_targets:
+            reasons = ", ".join(target.get("priorityReasons") or [])
+            lines.append(
+                "- "
+                f"{target.get('rank')}순위: {target.get('targetId')} / "
+                f"{target.get('riskLabel')} / {target.get('priorityBand')} / "
+                f"점수 {target.get('priorityScore')} / 근거: {reasons or '없음'}"
+            )
+
+    lines.extend(["", "[영향 시설 요약 - 응답 대상 항목에 반드시 사용]"])
+
     for label, key in (
-        ("link", "link"),
-        ("node", "node"),
-        ("editor object", "editorObject"),
+        ("관로", "link"),
+        ("맨홀/집수구/주변 지점", "node"),
     ):
         items = analysis_input.get(key, [])
         if not items:
@@ -726,7 +936,7 @@ def build_llm_message(analysis_input: dict[str, Any]) -> str:
             lines.append(f"- {label}: {name} ({element_id}){suffix}")
 
     past_history = analysis_input.get("past_history") or []
-    lines.extend(["", "[과거 조치 이력 - past_history]"])
+    lines.extend(["", "[과거 조치 이력]"])
     if not past_history:
         lines.append("- 없음")
     else:

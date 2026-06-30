@@ -1,10 +1,11 @@
 import json
 import logging
 import os
+from typing import Any
 
 from dotenv import load_dotenv
 from fastapi import APIRouter, FastAPI, HTTPException
-from pydantic import BaseModel, field_validator
+from pydantic import BaseModel, Field, field_validator
 
 load_dotenv()
 
@@ -12,7 +13,7 @@ from analyzer import analyze_weather
 from maintenance_store import (
     extract_source_ids,
     get_maintenance_history_by_source_ids,
-    log_maintenance_action,
+    log_maintenance_case,
 )
 from scenarios import WEATHER_SCENARIOS
 from swmm_formatter import build_analysis_payload
@@ -63,9 +64,34 @@ class AnalyzeRequest(AnalyzeBaseRequest):
         raise ValueError("TELEGRAM_CHAT_ID는 문자열 배열이어야 합니다.")
 
 
+class MaintenanceEvent(BaseModel):
+    id: int | str
+    run_id: str | None = None
+    step_index: int | str | None = None
+    model_time: str | None = None
+    target_id: str
+    source: str | None = None
+    hazard_type: str | None = None
+    hazard_level: str | None = None
+    hazard_detail: str | None = None
+    priority: dict[str, Any] | None = None
+    created_at: str | None = None
+
+
+class MaintenanceAction(BaseModel):
+    status: str | None = None
+    initial_action_detail: str | None = None
+    action_type: str | None = None
+    result_detail: str | None = None
+    result_status: str | None = None
+    recurrence_note: str | None = None
+    created_at: str | None = None
+
+
 class MaintenanceLogRequest(BaseModel):
-    sourceId: str
-    action_details: str
+    event: MaintenanceEvent
+    metrics: dict[str, Any] = Field(default_factory=dict)
+    action: MaintenanceAction
 
 
 def _attach_past_history(analysis_input: dict) -> dict:
@@ -83,18 +109,21 @@ def _build_context_summary(analysis_input: dict) -> dict:
         "nodeCount": len(analysis_input.get("node", [])),
         "editorObjectCount": len(analysis_input.get("editorObject", [])),
         "issueCount": len(analysis_input.get("swmmIssues", [])),
+        "priorityTargetCount": len(analysis_input.get("priorityTargets", [])),
         "link": analysis_input.get("link", []),
         "node": analysis_input.get("node", []),
         "editorObject": analysis_input.get("editorObject", []),
+        "priorityTargets": analysis_input.get("priorityTargets", []),
         "pastHistoryCount": len(analysis_input.get("past_history", [])),
         "past_history": analysis_input.get("past_history", []),
     }
 
 
-@app.post("/maintenance/log")
+@api.post("/maintenance/log")
+@api.post("/maintenance/log/")
 async def maintenance_log(request: MaintenanceLogRequest):
     try:
-        result = log_maintenance_action(request.sourceId, request.action_details)
+        result = log_maintenance_case(request.model_dump())
     except ValueError as exc:
         raise HTTPException(status_code=400, detail=str(exc)) from exc
     except Exception as exc:
