@@ -9,7 +9,15 @@ WEATHER_SCENARIOS = {
         "RN-15m": 25.0, "RN-60m": 75.0, "RN-12H": 150.0, "RN-DAY": 200.0,
         "HM": 98.0, "PA": 1002.0, "PS": 1005.5, "TD": 18.0
     },
-    "약한비": {
+    "호우": {
+        "YYMMDDHHMI": "202606151500",
+        "STN": "90",
+        "WD1": 230.0, "WS1": 5.2, "WDS": 238.0, "WSS": 7.1,
+        "WD10": 225.0, "WS10": 4.8, "TA": 19.0, "RE": 1.0,
+        "RN-15m": 8.0, "RN-60m": 30.0, "RN-12H": 70.0, "RN-DAY": 100.0,
+        "HM": 94.0, "PA": 1005.0, "PS": 1008.0, "TD": 18.2
+    },
+    "우천": {
         "YYMMDDHHMI": "202606151500",
         "STN": "90",
         "WD1": 180.0, "WS1": 2.0, "WDS": 190.5, "WSS": 3.5,
@@ -26,3 +34,6 @@ WEATHER_SCENARIOS = {
         "HM": 40.2, "PA": 1012.8, "PS": 1015.0, "TD": 10.5
     }
 }
+
+WEATHER_SCENARIOS["약한비"] = WEATHER_SCENARIOS["우천"]
+WEATHER_SCENARIOS["비옴"] = WEATHER_SCENARIOS["우천"]
